@@ -8,4 +8,4 @@ Official product, privacy, and support pages for **Screening Room — Private Me
 
 ## App Store launch
 
-The homepage currently shows “App Store link coming soon.” When the App Store URL is available, replace the `#download` links used by the primary download buttons in `index.html` with the campaign or custom-product-page URL, then update the availability text and download section.
+The homepage currently shows “Coming soon on the App Store.” When the App Store URL is available, replace the `#availability` link used by the primary download button in `index.html` with the campaign or custom-product-page URL, then update the availability text and final call-to-action section.
