@@ -5,6 +5,7 @@ Official product, privacy, and support pages for **Screening Room — Private Me
 - Developer: QianYang
 - Support: yqdevsupport@gmail.com
 - Hosting: GitHub Pages from `main` and `/(root)`
+- Brand assets: optimized versions of the official app icon are used for the favicon, navigation mark, Apple touch icon, homepage hero, and social preview.
 
 ## App Store
 
