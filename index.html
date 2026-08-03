@@ -64,11 +64,12 @@
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
+      position: relative;
       margin: 0;
       overflow-x: hidden;
       background:
-        radial-gradient(circle at 50% 0, rgba(255, 174, 62, 0.08), transparent 30rem),
-        linear-gradient(180deg, rgba(4,7,18,.2), #040712 36rem),
+        radial-gradient(ellipse at 50% 0, rgba(18, 55, 125, .14), transparent 34rem),
+        linear-gradient(180deg, #050918 0, #040712 42rem),
         var(--bg);
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
@@ -77,22 +78,26 @@
     }
 
     .site-backdrop {
-      position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none;
+      position: absolute; inset: 0 0 auto; z-index: 0; height: min(900px, 100vh); min-height: 760px; overflow: hidden; pointer-events: none;
       background:
-        radial-gradient(ellipse at 50% 8%, rgba(255, 171, 54, .17), transparent 24rem),
-        linear-gradient(90deg, rgba(4, 7, 18, .96), transparent 30%, transparent 70%, rgba(4, 7, 18, .96));
+        radial-gradient(ellipse 48% 44% at 72% 26%, rgba(255, 166, 44, .12), transparent 68%),
+        radial-gradient(ellipse 82% 60% at 50% -10%, rgba(24, 61, 133, .24), transparent 70%),
+        linear-gradient(180deg, rgba(4, 8, 23, .08) 0, rgba(4, 7, 18, .2) 62%, #040712 100%);
+      box-shadow: inset 0 -180px 130px -110px #040712;
     }
     .site-backdrop::before,
     .site-backdrop::after {
-      content: ""; position: absolute; top: -4vh; bottom: -6vh; width: min(38vw, 580px); opacity: .72;
+      content: ""; position: absolute; top: -5%; bottom: 5%; width: min(36vw, 560px); opacity: .62;
       background:
-        linear-gradient(90deg, rgba(1, 5, 17, .8), transparent 18%, rgba(39, 87, 169, .12) 47%, rgba(0, 3, 13, .68) 100%),
-        repeating-linear-gradient(87deg, rgba(255,255,255,.015) 0 4%, rgba(42,83,160,.14) 7%, rgba(0,0,0,.28) 13% 19%),
-        linear-gradient(90deg, #020a22, var(--blue-light) 58%, #030919);
-      filter: drop-shadow(22px 0 55px rgba(0,0,0,.7));
+        linear-gradient(90deg, rgba(1, 5, 17, .94), transparent 24%, rgba(56, 103, 186, .12) 51%, rgba(1, 5, 17, .52) 78%, transparent),
+        repeating-linear-gradient(87deg, rgba(255,255,255,.012) 0 4%, rgba(34,73,151,.12) 7%, rgba(0,0,0,.24) 13% 20%),
+        linear-gradient(90deg, #02081c, #123574 58%, #020719);
+      filter: saturate(.9) drop-shadow(18px 0 48px rgba(0,0,0,.58));
+      -webkit-mask-image: linear-gradient(90deg, #000 0 58%, rgba(0,0,0,.82) 72%, rgba(0,0,0,.28) 88%, transparent 100%);
+      mask-image: linear-gradient(90deg, #000 0 58%, rgba(0,0,0,.82) 72%, rgba(0,0,0,.28) 88%, transparent 100%);
     }
-    .site-backdrop::before { left: -7vw; clip-path: polygon(0 0, 100% 0, 73% 49%, 100% 100%, 0 100%); }
-    .site-backdrop::after { right: -7vw; transform: scaleX(-1); clip-path: polygon(0 0, 100% 0, 73% 49%, 100% 100%, 0 100%); }
+    .site-backdrop::before { left: -4vw; }
+    .site-backdrop::after { right: -4vw; transform: scaleX(-1); }
     main, footer { position: relative; z-index: 1; }
 
     a { color: inherit; }
@@ -122,8 +127,10 @@
 
     .hero { position: relative; min-height: 770px; display: grid; align-items: center; isolation: isolate; }
     .hero::after {
-      content: ""; position: absolute; inset: 8% 22% 2%; z-index: -1; pointer-events: none;
-      background: radial-gradient(ellipse, rgba(255, 157, 35, .14), transparent 64%); filter: blur(20px);
+      content: ""; position: absolute; inset: 10% 4% 5%; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(ellipse 40% 46% at 72% 36%, rgba(255, 157, 35, .09), transparent 70%),
+        linear-gradient(180deg, transparent 72%, rgba(2, 5, 14, .32));
     }
     .hero-layout { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(280px, .88fr); gap: 64px; align-items: center; }
     .hero-content { max-width: 720px; padding: 120px 0 110px; text-align: left; }
@@ -239,7 +246,8 @@
       *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
     }
     @media (max-width: 900px) {
-      .site-backdrop::before, .site-backdrop::after { width: 44vw; opacity: .46; }
+      .site-backdrop { height: 820px; min-height: 0; }
+      .site-backdrop::before, .site-backdrop::after { width: 46vw; opacity: .42; }
       .hero { min-height: 760px; }
       .hero-layout { grid-template-columns: 1fr; gap: 0; }
       .hero-content { max-width: 760px; margin-inline: auto; padding: 36px 0 86px; text-align: center; }
@@ -262,7 +270,8 @@
       .wrap { width: min(100% - 28px, var(--max)); }
       nav { min-height: 62px; }
       .nav-links a:not(.language) { display: none; }
-      .site-backdrop::before, .site-backdrop::after { width: 58vw; opacity: .34; }
+      .site-backdrop { height: 760px; }
+      .site-backdrop::before, .site-backdrop::after { width: 58vw; opacity: .28; }
       .hero { min-height: 720px; }
       .hero-art { padding-top: 72px; }
       .app-icon { width: 154px; border-radius: 24%; }
