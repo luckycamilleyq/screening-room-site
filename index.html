@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="Screening Room is a private media player for iPhone that encrypts and plays videos directly from Files, iCloud Drive, NAS, and other storage providers—without importing them into a separate vault.">
+  <meta name="description" content="Screening Room encrypts and plays private videos on iPhone from Files, iCloud Drive, NAS, and compatible providers—without a separate vault.">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="theme-color" content="#050811">
   <link rel="canonical" href="https://luckycamilleyq.github.io/screening-room-site/">
@@ -20,22 +20,37 @@
   <meta property="og:image:width" content="512">
   <meta property="og:image:height" content="512">
   <meta property="og:image:alt" content="Screening Room app icon with blue theater curtains and an amber play button">
-  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Screening Room — Private Media Player for iPhone">
+  <meta name="twitter:description" content="Encrypt and play private videos from Files, iCloud Drive, NAS, and compatible storage providers without a separate vault.">
   <meta name="twitter:image" content="https://luckycamilleyq.github.io/screening-room-site/app-icon-512.jpg">
+  <meta name="twitter:image:alt" content="Screening Room app icon with blue theater curtains and an amber play button">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Screening Room",
-    "alternateName": "私映",
+    "alternateName": [
+      "Screening Room — Private Media Player",
+      "私映"
+    ],
     "description": "A private media player for iPhone that encrypts and plays videos directly from Files, iCloud Drive, NAS, and compatible storage providers without importing them into a separate vault.",
     "applicationCategory": "MultimediaApplication",
     "operatingSystem": "iOS",
+    "availableOnDevice": "iPhone",
     "url": "https://luckycamilleyq.github.io/screening-room-site/",
     "image": "https://luckycamilleyq.github.io/screening-room-site/app-icon-512.jpg",
     "downloadUrl": "https://apps.apple.com/us/app/screening-room/id6792022324",
+    "installUrl": "https://apps.apple.com/us/app/screening-room/id6792022324",
     "sameAs": "https://apps.apple.com/us/app/screening-room/id6792022324",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free to try with up to three protected files. Pro is available as a one-time in-app purchase with no subscription."
+    },
     "author": {
       "@type": "Person",
       "name": "QianYang"
@@ -78,7 +93,13 @@
     }
 
     .site-backdrop {
-      position: absolute; inset: 0 0 auto; z-index: 0; height: min(900px, 100vh); min-height: 760px; overflow: hidden; pointer-events: none;
+      position: absolute;
+      inset: 0 0 auto;
+      z-index: 0;
+      height: min(900px, 100vh);
+      min-height: 760px;
+      overflow: hidden;
+      pointer-events: none;
       background:
         radial-gradient(ellipse 48% 44% at 72% 26%, rgba(255, 166, 44, .12), transparent 68%),
         radial-gradient(ellipse 82% 60% at 50% -10%, rgba(24, 61, 133, .24), transparent 70%),
@@ -87,7 +108,12 @@
     }
     .site-backdrop::before,
     .site-backdrop::after {
-      content: ""; position: absolute; top: -5%; bottom: 5%; width: min(36vw, 560px); opacity: .62;
+      content: "";
+      position: absolute;
+      top: -5%;
+      bottom: 5%;
+      width: min(36vw, 560px);
+      opacity: .62;
       background:
         linear-gradient(90deg, rgba(1, 5, 17, .94), transparent 24%, rgba(56, 103, 186, .12) 51%, rgba(1, 5, 17, .52) 78%, transparent),
         repeating-linear-gradient(87deg, rgba(255,255,255,.012) 0 4%, rgba(34,73,151,.12) 7%, rgba(0,0,0,.24) 13% 20%),
@@ -104,14 +130,23 @@
     button, a { -webkit-tap-highlight-color: transparent; }
     .wrap { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
     .skip-link {
-      position: fixed; top: 10px; left: 10px; z-index: 100;
-      padding: 10px 14px; border-radius: 10px; background: var(--gold-light); color: #171008;
-      transform: translateY(-160%); transition: transform .2s;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 100;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--gold-light);
+      color: #171008;
+      transform: translateY(-160%);
+      transition: transform .2s;
     }
     .skip-link:focus { transform: translateY(0); }
 
     header {
-      position: sticky; top: 0; z-index: 20;
+      position: sticky;
+      top: 0;
+      z-index: 20;
       border-bottom: 1px solid transparent;
       background: rgba(4, 7, 18, 0.76);
       backdrop-filter: blur(18px) saturate(130%);
@@ -127,7 +162,11 @@
 
     .hero { position: relative; min-height: 770px; display: grid; align-items: center; isolation: isolate; }
     .hero::after {
-      content: ""; position: absolute; inset: 10% 4% 5%; z-index: -1; pointer-events: none;
+      content: "";
+      position: absolute;
+      inset: 10% 4% 5%;
+      z-index: -1;
+      pointer-events: none;
       background:
         radial-gradient(ellipse 40% 46% at 72% 36%, rgba(255, 157, 35, .09), transparent 70%),
         linear-gradient(180deg, transparent 72%, rgba(2, 5, 14, .32));
@@ -135,23 +174,55 @@
     .hero-layout { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(280px, .88fr); gap: 64px; align-items: center; }
     .hero-content { max-width: 720px; padding: 120px 0 110px; text-align: left; }
     .eyebrow {
-      display: inline-flex; align-items: center; gap: 8px; margin-bottom: 22px; padding: 7px 12px;
-      border: 1px solid rgba(212,154,67,.25); border-radius: 999px; color: var(--gold-light); background: rgba(212,154,67,.07);
-      font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 22px;
+      padding: 7px 12px;
+      border: 1px solid rgba(212,154,67,.25);
+      border-radius: 999px;
+      color: var(--gold-light);
+      background: rgba(212,154,67,.07);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
     }
     h1, h2, h3 { margin-top: 0; letter-spacing: -0.035em; }
     h1 { margin-bottom: 24px; font-size: clamp(54px, 6.8vw, 88px); line-height: .96; font-weight: 780; }
-    h1 span { display: block; color: var(--gold-light); font-family: Georgia, "Times New Roman", serif; font-size: .58em; font-style: italic; font-weight: 400; line-height: 1.28; }
+    h1 span {
+      display: block;
+      color: var(--gold-light);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: .58em;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.28;
+    }
     .hero-copy { max-width: 660px; margin: 0 0 34px; color: #c7cad2; font-size: clamp(18px, 2.2vw, 22px); line-height: 1.55; }
     .actions { display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 12px; }
     .button {
-      display: inline-flex; min-height: 50px; align-items: center; justify-content: center; gap: 9px;
-      padding: 0 21px; border: 1px solid var(--line); border-radius: 14px; text-decoration: none; font-size: 15px; font-weight: 680;
-      background: rgba(255,255,255,.05); transition: transform .2s, border-color .2s, background .2s;
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 0 21px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 680;
+      background: rgba(255,255,255,.05);
+      transition: transform .2s, border-color .2s, background .2s;
     }
     .button:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.25); background: rgba(255,255,255,.08); }
-    .button.primary { border-color: transparent; background: linear-gradient(135deg, var(--gold-light), var(--gold)); color: var(--gold-ink); box-shadow: 0 12px 35px rgba(212,154,67,.2); }
-    .button .apple { font-size: 20px; line-height: 1; }
+    .button.primary {
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      color: var(--gold-ink);
+      box-shadow: 0 12px 35px rgba(212,154,67,.2);
+    }
     .availability { margin: 16px 0 0; color: #8f96a5; font-size: 12px; }
     .hero-art { position: relative; display: grid; place-items: center; min-height: 420px; }
     .hero-art::before,
@@ -159,8 +230,14 @@
     .hero-art::before { width: 430px; height: 430px; border: 1px solid rgba(255,195,92,.12); box-shadow: 0 0 95px rgba(226,132,19,.1), inset 0 0 80px rgba(255,174,56,.05); }
     .hero-art::after { width: 350px; height: 350px; background: radial-gradient(circle, rgba(255,165,42,.2), transparent 68%); filter: blur(16px); }
     .app-icon {
-      position: relative; z-index: 1; display: block; width: min(29vw, 320px); height: auto; aspect-ratio: 1 / 1;
-      border-radius: 24%; object-fit: contain;
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: min(29vw, 320px);
+      height: auto;
+      aspect-ratio: 1 / 1;
+      border-radius: 24%;
+      object-fit: contain;
       box-shadow: 0 34px 90px rgba(0,0,0,.62), 0 0 42px rgba(235,145,28,.18), inset 0 0 0 1px rgba(255,255,255,.08);
     }
 
@@ -180,14 +257,27 @@
     .difference { background: linear-gradient(180deg, rgba(4,7,18,.9) 0, rgba(9,17,36,.96) 48%, rgba(4,7,18,.9) 100%); }
     .feature-grid { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 16px; }
     .feature-card {
-      min-height: 290px; padding: 30px; border: 1px solid var(--line); border-radius: 24px; background: var(--card);
-      box-shadow: inset 0 1px rgba(255,255,255,.035); transition: transform .25s, border-color .25s;
+      min-height: 290px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--card);
+      box-shadow: inset 0 1px rgba(255,255,255,.035);
+      transition: transform .25s, border-color .25s;
     }
     .feature-card:hover { transform: translateY(-4px); border-color: rgba(212,154,67,.3); }
     .feature-card:first-child { background: linear-gradient(145deg, rgba(212,154,67,.12), rgba(255,255,255,.035)); }
     .icon {
-      width: 48px; height: 48px; display: grid; place-items: center; margin-bottom: 54px;
-      border: 1px solid rgba(212,154,67,.25); border-radius: 15px; background: rgba(212,154,67,.08); color: var(--gold-light); font-size: 22px;
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 54px;
+      border: 1px solid rgba(212,154,67,.25);
+      border-radius: 15px;
+      background: rgba(212,154,67,.08);
+      color: var(--gold-light);
+      font-size: 22px;
     }
     .feature-card h3 { margin-bottom: 10px; font-size: 23px; }
     .feature-card p { margin: 0; color: var(--muted); font-size: 15px; }
@@ -198,15 +288,30 @@
     .step { position: relative; display: grid; grid-template-columns: 58px 1fr; gap: 22px; padding: 0 0 48px; }
     .step:not(:last-child)::after { content: ""; position: absolute; top: 58px; bottom: 0; left: 28px; width: 1px; background: linear-gradient(var(--gold), var(--line)); }
     .step-number {
-      width: 58px; height: 58px; display: grid; place-items: center; z-index: 1; border: 1px solid rgba(212,154,67,.28); border-radius: 18px;
-      background: #091124; color: var(--gold-light); font-family: Georgia, serif; font-size: 21px;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      z-index: 1;
+      border: 1px solid rgba(212,154,67,.28);
+      border-radius: 18px;
+      background: #091124;
+      color: var(--gold-light);
+      font-family: Georgia, serif;
+      font-size: 21px;
     }
     .step h3 { margin: 4px 0 7px; font-size: 24px; }
     .step p { margin: 0; color: var(--muted); }
 
     .privacy-panel {
-      position: relative; overflow: hidden; display: grid; grid-template-columns: .95fr 1.05fr; gap: 55px;
-      padding: 58px; border: 1px solid rgba(212,154,67,.25); border-radius: 32px;
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 55px;
+      padding: 58px;
+      border: 1px solid rgba(212,154,67,.25);
+      border-radius: 32px;
       background: linear-gradient(135deg, rgba(10,34,84,.76), rgba(7,10,22,.94) 60%);
     }
     .privacy-panel::after { content: ""; position: absolute; right: -100px; bottom: -140px; width: 360px; height: 360px; border: 1px solid rgba(212,154,67,.12); border-radius: 50%; box-shadow: 0 0 100px rgba(212,154,67,.08); }
@@ -229,7 +334,8 @@
     summary::-webkit-details-marker { display: none; }
     summary::after { content: "+"; position: absolute; right: 5px; top: 20px; color: var(--gold-light); font-size: 25px; font-weight: 300; transition: transform .2s; }
     details[open] summary::after { transform: rotate(45deg); }
-    details p { max-width: 720px; margin: -4px 0 24px; color: var(--muted); }
+    details p { max-width: 760px; margin: -4px 0 24px; color: var(--muted); }
+    details p a { color: var(--gold-light); }
 
     .final-cta { padding-top: 35px; text-align: center; }
     .final-cta .panel { padding: 74px 28px; border: 1px solid var(--line); border-radius: 30px; background: radial-gradient(circle at 50% 0, rgba(255,174,56,.14), transparent 55%), linear-gradient(145deg, rgba(10,27,67,.82), rgba(7,10,22,.92)); }
@@ -305,7 +411,7 @@
         <a href="#why">Why it’s different</a>
         <a href="#privacy">Privacy</a>
         <a href="#faq">FAQ</a>
-        <a class="language" href="privacy-zh.html" lang="zh-CN">中文</a>
+        <a class="language" href="privacy-zh.html" lang="zh-CN">中文隐私政策</a>
       </div>
     </nav>
   </header>
@@ -356,7 +462,7 @@
           <article class="feature-card">
             <div class="icon" aria-hidden="true">▶</div>
             <h3>Private playback</h3>
-            <p>Watch inside Screening Room after Face ID or password unlock. Media opened through the app does not appear as a standard preview entry in Files Recents.</p>
+            <p>Watch inside Screening Room after Face ID or password unlock. Opening protected media through Screening Room helps keep ordinary media previews out of Files Recents.</p>
           </article>
           <article class="feature-card">
             <div class="icon" aria-hidden="true">◇</div>
@@ -418,7 +524,7 @@
         <div class="use-grid">
           <article class="use-card"><h3>iCloud Drive</h3><p>Protect personal videos while keeping them inside the folders and sync workflow you already use.</p></article>
           <article class="use-card"><h3>NAS &amp; network storage</h3><p>Play supported encrypted media selected through compatible iOS file providers without building a separate on-device vault.</p></article>
-          <article class="use-card"><h3>Local Files</h3><p>Keep private media on your iPhone, unlock it with Face ID, and avoid standard preview entries in Files Recents.</p></article>
+          <article class="use-card"><h3>Local Files</h3><p>Keep private media on your iPhone, unlock it with Face ID, and help keep ordinary media previews out of Files Recents.</p></article>
         </div>
       </div>
     </section>
@@ -440,7 +546,7 @@
           </details>
           <details>
             <summary>Will videos appear in Files Recents after I watch them?</summary>
-            <p>Media viewed through Screening Room is not added as a standard file-preview entry in Files Recents. The encrypted file itself may still be visible in Files according to the location and Files app behavior.</p>
+            <p>Opening protected media through Screening Room helps keep ordinary media previews out of Files Recents. Screening Room cannot clear existing Recents entries or change the Files app’s Recents feature. The encrypted file itself may still be visible in Files according to its location and normal Files behavior. <a href="keep-private-videos-out-of-files-recents.html">Read the Files Recents privacy guide.</a></p>
           </details>
           <details>
             <summary>Does Screening Room upload my files?</summary>
@@ -470,6 +576,7 @@
         <a href="https://apps.apple.com/us/app/screening-room/id6792022324">App Store</a>
         <a href="privacy-en.html">Privacy</a>
         <a href="support-en.html">Support</a>
+        <a href="keep-private-videos-out-of-files-recents.html">Files Recents guide</a>
         <a href="privacy-zh.html" lang="zh-CN">中文隐私政策</a>
         <a href="support-zh.html" lang="zh-CN">中文支持</a>
       </div>
