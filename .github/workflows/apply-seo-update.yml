@@ -1,0 +1,163 @@
+name: Apply SEO update
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/apply-seo-update.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Update website files
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          def update(path, replacements):
+              p = Path(path)
+              text = p.read_text(encoding='utf-8')
+              for old, new in replacements:
+                  if old not in text:
+                      raise SystemExit(f'Missing expected text in {path}: {old[:100]!r}')
+                  text = text.replace(old, new, 1)
+              p.write_text(text, encoding='utf-8')
+
+          update('index.html', [
+              ('<meta name="description" content="Screening Room is a private media player for iPhone that encrypts and plays videos directly from Files, iCloud Drive, NAS, and other storage providers—without importing them into a separate vault.">',
+               '<meta name="description" content="Screening Room encrypts and plays private videos on iPhone from Files, iCloud Drive, NAS, and compatible providers—without a separate vault.">'),
+              ('<meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:image" content="https://luckycamilleyq.github.io/screening-room-site/app-icon-512.jpg">',
+               '<meta name="twitter:card" content="summary">\n  <meta name="twitter:title" content="Screening Room — Private Media Player for iPhone">\n  <meta name="twitter:description" content="Encrypt and play private videos from Files, iCloud Drive, NAS, and compatible storage providers without a separate vault.">\n  <meta name="twitter:image" content="https://luckycamilleyq.github.io/screening-room-site/app-icon-512.jpg">\n  <meta name="twitter:image:alt" content="Screening Room app icon with blue theater curtains and an amber play button">'),
+              ('"alternateName": "私映",',
+               '"alternateName": ["Screening Room — Private Media Player", "私映"],'),
+              ('"operatingSystem": "iOS",',
+               '"operatingSystem": "iOS",\n    "availableOnDevice": "iPhone",'),
+              ('"downloadUrl": "https://apps.apple.com/us/app/screening-room/id6792022324",',
+               '"downloadUrl": "https://apps.apple.com/us/app/screening-room/id6792022324",\n    "installUrl": "https://apps.apple.com/us/app/screening-room/id6792022324",\n    "offers": {\n      "@type": "Offer",\n      "price": "0",\n      "priceCurrency": "USD",\n      "description": "Free to try with up to three protected files. Pro is available as a one-time in-app purchase with no subscription."\n    },'),
+              ('<a class="language" href="privacy-zh.html" lang="zh-CN">中文</a>',
+               '<a class="language" href="privacy-zh.html" lang="zh-CN">中文隐私政策</a>'),
+              ('Media opened through the app does not appear as a standard preview entry in Files Recents.',
+               'Opening protected media through Screening Room helps keep ordinary media previews out of Files Recents.'),
+              ('Keep private media on your iPhone, unlock it with Face ID, and avoid standard preview entries in Files Recents.',
+               'Keep private media on your iPhone, unlock it with Face ID, and help keep ordinary media previews out of Files Recents.'),
+              ('<p>Media viewed through Screening Room is not added as a standard file-preview entry in Files Recents. The encrypted file itself may still be visible in Files according to the location and Files app behavior.</p>',
+               '<p>Opening protected media through Screening Room helps keep ordinary media previews out of Files Recents. Screening Room cannot clear existing Recents entries or change the Files app’s Recents feature. The encrypted file itself may still be visible in Files according to its location and normal Files behavior. <a href="keep-private-videos-out-of-files-recents.html">Read the Files Recents privacy guide.</a></p>'),
+              ('<a href="support-en.html">Support</a>\n        <a href="privacy-zh.html"',
+               '<a href="support-en.html">Support</a>\n        <a href="keep-private-videos-out-of-files-recents.html">Files Recents guide</a>\n        <a href="privacy-zh.html"'),
+          ])
+
+          support_common_css = ('    .brand {\n      font-weight: 700;\n      letter-spacing: -0.02em;\n    }',
+                                '    .brand {\n      color: var(--text);\n      text-decoration: none;\n      font-weight: 700;\n      letter-spacing: -0.02em;\n    }')
+
+          update('support-en.html', [
+              ('  <meta name="description" content="Technical support, FAQs, and contact information for Screening Room.">\n  <title>Screening Room - Support</title>',
+               '  <meta name="description" content="Technical support and FAQs for Screening Room, the private media player for iPhone that works with Files, iCloud Drive, NAS, and compatible providers.">\n  <meta name="robots" content="index,follow">\n  <link rel="canonical" href="https://luckycamilleyq.github.io/screening-room-site/support-en.html">\n  <link rel="alternate" hreflang="en" href="https://luckycamilleyq.github.io/screening-room-site/support-en.html">\n  <link rel="alternate" hreflang="zh-CN" href="https://luckycamilleyq.github.io/screening-room-site/support-zh.html">\n  <link rel="alternate" hreflang="x-default" href="https://luckycamilleyq.github.io/screening-room-site/support-en.html">\n  <title>Screening Room Support &amp; FAQ | Private Media Player for iPhone</title>'),
+              support_common_css,
+              ('      <div class="brand">Screening Room · 私映</div>',
+               '      <a class="brand" href="./">Screening Room · 私映</a>'),
+              ('        <!-- Change this link if your English privacy policy uses a different file name -->\n', ''),
+              ('          <li>Your iPhone or iPad model</li>\n          <li>Your iOS or iPadOS version</li>',
+               '          <li>Your iPhone model</li>\n          <li>Your iOS version</li>'),
+              ('      <p>Last updated: July 24, 2026</p>',
+               '      <p><a href="./">Screening Room home</a> · Last updated: August 3, 2026</p>'),
+          ])
+
+          update('support-zh.html', [
+              ('  <meta name="description" content="私映（Screening Room）技术支持、常见问题与联系方式。">\n  <title>私映 - 技术支持</title>',
+               '  <meta name="description" content="私映（Screening Room）iPhone 私密媒体播放器的技术支持、常见问题与联系方式。">\n  <meta name="robots" content="index,follow">\n  <link rel="canonical" href="https://luckycamilleyq.github.io/screening-room-site/support-zh.html">\n  <link rel="alternate" hreflang="zh-CN" href="https://luckycamilleyq.github.io/screening-room-site/support-zh.html">\n  <link rel="alternate" hreflang="en" href="https://luckycamilleyq.github.io/screening-room-site/support-en.html">\n  <link rel="alternate" hreflang="x-default" href="https://luckycamilleyq.github.io/screening-room-site/support-en.html">\n  <title>私映技术支持与常见问题 | Screening Room</title>'),
+              support_common_css,
+              ('      <div class="brand">私映 · Screening Room</div>',
+               '      <a class="brand" href="./">私映 · Screening Room</a>'),
+              ('        <!-- 如你的隐私政策文件名不同，请修改下面的链接 -->\n', ''),
+              ('          <li>iPhone 或 iPad 型号</li>\n          <li>iOS / iPadOS 版本</li>',
+               '          <li>iPhone 型号</li>\n          <li>iOS 版本</li>'),
+              ('      <p>最后更新：2026 年 7 月 24 日</p>',
+               '      <p><a href="./">返回私映官网</a> · 最后更新：2026 年 8 月 3 日</p>'),
+          ])
+
+          update('privacy-en.html', [
+              ('<meta name="robots" content="index,follow"><title>Screening Room Privacy Policy</title>',
+               '<meta name="robots" content="index,follow"><link rel="canonical" href="https://luckycamilleyq.github.io/screening-room-site/privacy-en.html"><link rel="alternate" hreflang="en" href="https://luckycamilleyq.github.io/screening-room-site/privacy-en.html"><link rel="alternate" hreflang="zh-CN" href="https://luckycamilleyq.github.io/screening-room-site/privacy-zh.html"><link rel="alternate" hreflang="x-default" href="https://luckycamilleyq.github.io/screening-room-site/privacy-en.html"><title>Screening Room Privacy Policy</title>'),
+              ('.topbar{display:flex;justify-content:flex-end;margin-bottom:14px}',
+               '.topbar{display:flex;justify-content:space-between;gap:12px;margin-bottom:14px}'),
+              ('<div class="topbar"><a class="language-link" href="privacy-zh.html">中文</a></div>',
+               '<div class="topbar"><a class="language-link" href="./">Screening Room home</a><a class="language-link" href="privacy-zh.html" lang="zh-CN">中文</a></div>'),
+              ('</article><footer>Screening Room / 私映 · QianYang</footer>',
+               '</article><footer><a href="./">Screening Room home</a> · Screening Room / 私映 · QianYang</footer>'),
+          ])
+
+          update('privacy-zh.html', [
+              ('<meta name="robots" content="index,follow"><title>私映（Screening Room）隐私政策</title>',
+               '<meta name="robots" content="index,follow"><link rel="canonical" href="https://luckycamilleyq.github.io/screening-room-site/privacy-zh.html"><link rel="alternate" hreflang="zh-CN" href="https://luckycamilleyq.github.io/screening-room-site/privacy-zh.html"><link rel="alternate" hreflang="en" href="https://luckycamilleyq.github.io/screening-room-site/privacy-en.html"><link rel="alternate" hreflang="x-default" href="https://luckycamilleyq.github.io/screening-room-site/privacy-en.html"><title>私映（Screening Room）隐私政策</title>'),
+              ('.topbar{display:flex;justify-content:flex-end;margin-bottom:14px}',
+               '.topbar{display:flex;justify-content:space-between;gap:12px;margin-bottom:14px}'),
+              ('<div class="topbar"><a class="language-link" href="privacy-en.html">English</a></div>',
+               '<div class="topbar"><a class="language-link" href="./">返回私映官网</a><a class="language-link" href="privacy-en.html" lang="en">English</a></div>'),
+              ('</article><footer>Screening Room / 私映 · QianYang</footer>',
+               '</article><footer><a href="./">返回私映官网</a> · Screening Room / 私映 · QianYang</footer>'),
+          ])
+
+          Path('sitemap.xml').write_text('''<?xml version="1.0" encoding="UTF-8"?>
+          <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+            <url><loc>https://luckycamilleyq.github.io/screening-room-site/</loc><lastmod>2026-08-03</lastmod></url>
+            <url><loc>https://luckycamilleyq.github.io/screening-room-site/keep-private-videos-out-of-files-recents.html</loc><lastmod>2026-08-03</lastmod></url>
+            <url><loc>https://luckycamilleyq.github.io/screening-room-site/privacy-en.html</loc><lastmod>2026-08-03</lastmod></url>
+            <url><loc>https://luckycamilleyq.github.io/screening-room-site/support-en.html</loc><lastmod>2026-08-03</lastmod></url>
+            <url><loc>https://luckycamilleyq.github.io/screening-room-site/privacy-zh.html</loc><lastmod>2026-08-03</lastmod></url>
+            <url><loc>https://luckycamilleyq.github.io/screening-room-site/support-zh.html</loc><lastmod>2026-08-03</lastmod></url>
+          </urlset>
+          '''.replace('          ', ''), encoding='utf-8')
+
+          Path('llms.txt').write_text('''# Screening Room — Private Media Player for iPhone
+
+Screening Room, also known as 私映, is a private media player for iPhone that encrypts and plays private videos directly from Files, iCloud Drive, NAS, and compatible storage providers. It protects media without requiring users to import files into a separate app-managed vault.
+
+Screening Room is primarily a private media player, not a traditional file vault with a secondary player.
+
+## Canonical pages
+
+- Product overview: https://luckycamilleyq.github.io/screening-room-site/
+- Files Recents privacy guide: https://luckycamilleyq.github.io/screening-room-site/keep-private-videos-out-of-files-recents.html
+- App Store listing: https://apps.apple.com/us/app/screening-room/id6792022324
+- Privacy Policy: https://luckycamilleyq.github.io/screening-room-site/privacy-en.html
+- Technical support: https://luckycamilleyq.github.io/screening-room-site/support-en.html
+- 中文隐私政策: https://luckycamilleyq.github.io/screening-room-site/privacy-zh.html
+- 中文技术支持: https://luckycamilleyq.github.io/screening-room-site/support-zh.html
+
+## Core capabilities
+
+- On-device encryption of user-selected media.
+- Playback protected by Face ID or a Screening Room password.
+- Files may remain in Files, iCloud Drive, NAS, or another compatible provider selected by the user.
+- Opening protected media through Screening Room helps keep ordinary media previews out of Files Recents.
+- Screening Room cannot clear existing Files Recents entries or modify the Files app’s Recents feature.
+- No developer-operated account is required.
+- Free to try with up to three protected files.
+- Pro is available as a one-time in-app purchase with no subscription.
+- Ordinary playback, encryption, and decryption do not automatically upload user files to developer-controlled servers.
+
+## Publisher
+
+- Developer: QianYang
+- Support: yqdevsupport@gmail.com
+''', encoding='utf-8')
+
+          Path('.github/workflows/apply-seo-update.yml').unlink()
+          PY
+      - name: Commit website update
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Improve SEO metadata and page consistency"
+          git push origin main
