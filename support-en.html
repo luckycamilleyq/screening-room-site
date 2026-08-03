@@ -3,8 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Technical support, FAQs, and contact information for Screening Room.">
-  <title>Screening Room - Support</title>
+  <meta name="description" content="Technical support and FAQs for Screening Room, the private media player for iPhone that works with Files, iCloud Drive, NAS, and compatible providers.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://luckycamilleyq.github.io/screening-room-site/support-en.html">
+  <link rel="alternate" hreflang="en" href="https://luckycamilleyq.github.io/screening-room-site/support-en.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://luckycamilleyq.github.io/screening-room-site/support-zh.html">
+  <link rel="alternate" hreflang="x-default" href="https://luckycamilleyq.github.io/screening-room-site/support-en.html">
+  <title>Screening Room Support &amp; FAQ | Private Media Player for iPhone</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -31,250 +36,75 @@
       }
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      background:
-        radial-gradient(circle at top, rgba(183, 121, 31, 0.10), transparent 32rem),
-        var(--bg);
+      background: radial-gradient(circle at top, rgba(183, 121, 31, 0.10), transparent 32rem), var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
-        "Helvetica Neue", Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
       line-height: 1.65;
     }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: var(--accent-hover);
-      text-decoration: underline;
-    }
-
-    .container {
-      width: min(920px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    header {
-      padding: 24px 0 8px;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    .language {
-      font-size: 14px;
-      color: var(--secondary);
-    }
-
-    .hero {
-      padding: 72px 0 44px;
-      text-align: center;
-    }
-
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); text-decoration: underline; }
+    .container { width: min(920px, calc(100% - 32px)); margin: 0 auto; }
+    header { padding: 24px 0 8px; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .brand { color: var(--text); text-decoration: none; font-weight: 700; letter-spacing: -0.02em; }
+    .language { font-size: 14px; color: var(--secondary); }
+    .hero { padding: 72px 0 44px; text-align: center; }
     .eyebrow {
-      display: inline-block;
-      margin-bottom: 14px;
-      padding: 6px 12px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      color: var(--secondary);
-      font-size: 14px;
-      background: var(--card);
+      display: inline-block; margin-bottom: 14px; padding: 6px 12px;
+      border: 1px solid var(--border); border-radius: 999px; color: var(--secondary);
+      font-size: 14px; background: var(--card);
     }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(38px, 7vw, 64px);
-      line-height: 1.08;
-      letter-spacing: -0.04em;
-    }
-
-    .subtitle {
-      max-width: 680px;
-      margin: 20px auto 0;
-      color: var(--secondary);
-      font-size: clamp(18px, 2.4vw, 22px);
-    }
-
-    .actions {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 28px;
-    }
-
+    h1 { margin: 0; font-size: clamp(38px, 7vw, 64px); line-height: 1.08; letter-spacing: -0.04em; }
+    .subtitle { max-width: 680px; margin: 20px auto 0; color: var(--secondary); font-size: clamp(18px, 2.4vw, 22px); }
+    .actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
     .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 0 20px;
-      border-radius: 12px;
-      font-weight: 600;
-      border: 1px solid var(--border);
-      background: var(--card);
+      display: inline-flex; align-items: center; justify-content: center; min-height: 46px;
+      padding: 0 20px; border-radius: 12px; font-weight: 600;
+      border: 1px solid var(--border); background: var(--card);
     }
-
-    .button.primary {
-      color: #fff;
-      background: var(--accent);
-      border-color: transparent;
-    }
-
-    .button.primary:hover {
-      color: #fff;
-      background: var(--accent-hover);
-      text-decoration: none;
-    }
-
-    main {
-      padding-bottom: 72px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
+    .button.primary { color: #fff; background: var(--accent); border-color: transparent; }
+    .button.primary:hover { color: #fff; background: var(--accent-hover); text-decoration: none; }
+    main { padding-bottom: 72px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
     .card {
-      padding: 28px;
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      background: var(--card);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
+      padding: 28px; border: 1px solid var(--border); border-radius: 22px;
+      background: var(--card); box-shadow: var(--shadow);
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
     }
-
-    .card.full {
-      grid-column: 1 / -1;
-    }
-
-    h2 {
-      margin: 0 0 12px;
-      font-size: 24px;
-      letter-spacing: -0.02em;
-    }
-
-    h3 {
-      margin: 24px 0 8px;
-      font-size: 18px;
-    }
-
-    p {
-      margin: 0 0 14px;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    ul, ol {
-      margin: 10px 0 0;
-      padding-left: 22px;
-    }
-
-    li + li {
-      margin-top: 8px;
-    }
-
-    details {
-      padding: 18px 0;
-      border-top: 1px solid var(--border);
-    }
-
-    details:first-of-type {
-      border-top: 0;
-      padding-top: 4px;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 600;
-      list-style: none;
-    }
-
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    summary::after {
-      content: "+";
-      float: right;
-      color: var(--secondary);
-      font-size: 20px;
-      line-height: 1;
-    }
-
-    details[open] summary::after {
-      content: "−";
-    }
-
-    details p {
-      margin-top: 12px;
-      color: var(--secondary);
-    }
-
-    .note {
-      color: var(--secondary);
-      font-size: 14px;
-    }
-
-    footer {
-      padding: 28px 0 42px;
-      color: var(--secondary);
-      font-size: 14px;
-      text-align: center;
-    }
+    .card.full { grid-column: 1 / -1; }
+    h2 { margin: 0 0 12px; font-size: 24px; letter-spacing: -0.02em; }
+    h3 { margin: 24px 0 8px; font-size: 18px; }
+    p { margin: 0 0 14px; }
+    p:last-child { margin-bottom: 0; }
+    ul, ol { margin: 10px 0 0; padding-left: 22px; }
+    li + li { margin-top: 8px; }
+    details { padding: 18px 0; border-top: 1px solid var(--border); }
+    details:first-of-type { border-top: 0; padding-top: 4px; }
+    summary { cursor: pointer; font-weight: 600; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; float: right; color: var(--secondary); font-size: 20px; line-height: 1; }
+    details[open] summary::after { content: "−"; }
+    details p { margin-top: 12px; color: var(--secondary); }
+    .note { color: var(--secondary); font-size: 14px; }
+    footer { padding: 28px 0 42px; color: var(--secondary); font-size: 14px; text-align: center; }
 
     @media (max-width: 720px) {
-      .hero {
-        padding-top: 52px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .card.full {
-        grid-column: auto;
-      }
-
-      .card {
-        padding: 22px;
-        border-radius: 18px;
-      }
+      .hero { padding-top: 52px; }
+      .grid { grid-template-columns: 1fr; }
+      .card.full { grid-column: auto; }
+      .card { padding: 22px; border-radius: 18px; }
     }
-</style>
+  </style>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <div class="brand">Screening Room · 私映</div>
-      <div class="language"><a href="support-zh.html">简体中文</a></div>
+      <a class="brand" href="./">Screening Room · 私映</a>
+      <div class="language"><a href="support-zh.html" lang="zh-CN">简体中文</a></div>
     </div>
   </header>
 
@@ -283,13 +113,12 @@
       <div class="eyebrow">Technical Support</div>
       <h1>We’re here to help</h1>
       <p class="subtitle">
-        Screening Room is a privacy-focused media player that encrypts photos and videos
-        while allowing them to remain in their original storage locations.
+        Screening Room is a privacy-focused media player for iPhone that encrypts photos and videos
+        while allowing them to remain in the storage locations you choose.
         Protected files can be unlocked with Face ID, Touch ID, or your app password.
       </p>
       <div class="actions">
         <a class="button primary" href="mailto:yqdevsupport@gmail.com?subject=Screening%20Room%20Support">Contact Support</a>
-        <!-- Change this link if your English privacy policy uses a different file name -->
         <a class="button" href="privacy-en.html">Privacy Policy</a>
       </div>
     </div>
@@ -310,8 +139,8 @@
       <section class="card">
         <h2>When Reporting an Issue</h2>
         <ul>
-          <li>Your iPhone or iPad model</li>
-          <li>Your iOS or iPadOS version</li>
+          <li>Your iPhone model</li>
+          <li>Your iOS version</li>
           <li>Your Screening Room app version</li>
           <li>The file location, such as On My iPhone, iCloud Drive, NAS, or another cloud provider</li>
           <li>The file format, approximate size, and steps to reproduce the issue</li>
@@ -325,8 +154,8 @@
         <details>
           <summary>Does Screening Room upload my photos or videos?</summary>
           <p>
-            Screening Room is designed to perform its core processing on your device.
-            Files can remain in the Files app, iCloud Drive, NAS, or another supported storage location
+            Screening Room is designed to perform its core processing on your iPhone.
+            Files can remain in Files, iCloud Drive, NAS, or another supported storage location
             instead of being moved into a separate in-app vault.
             Please review the Privacy Policy for full details about data handling.
           </p>
@@ -345,7 +174,7 @@
           <summary>What should I do if Face ID or Touch ID does not work?</summary>
           <p>
             Confirm that biometric authentication is enabled for Screening Room in system settings
-            and that Face ID or Touch ID is configured on your device.
+            and that Face ID or Touch ID is configured on your iPhone.
             You can also unlock the app with your app password.
           </p>
         </details>
@@ -369,9 +198,9 @@
         </details>
 
         <details>
-          <summary>How do I continue using the app on a new device?</summary>
+          <summary>How do I continue using the app on a new iPhone?</summary>
           <p>
-            Make sure your encrypted files are fully synced to a location available on the new device,
+            Make sure your encrypted files are fully synced to a location available on the new iPhone,
             and keep your password and recovery code available.
             In-app purchases can be restored using the same Apple ID that was used for the original purchase.
           </p>
@@ -390,7 +219,7 @@
         <details>
           <summary>Will deleting the app delete my encrypted files?</summary>
           <p>
-            Files stored in the Files app, iCloud Drive, NAS, or another external location
+            Files stored in Files, iCloud Drive, NAS, or another external location
             are generally not deleted automatically when you remove the app.
             However, app settings, access records, and data stored only inside the app may be lost.
             Before deleting the app, verify that important files, your password, and your recovery code are safely backed up.
@@ -401,7 +230,7 @@
           <summary>Which file formats are supported?</summary>
           <p>
             Playback compatibility depends on iOS, the file container, video or audio codec,
-            and device capabilities.
+            and iPhone capabilities.
             If a file cannot be played, send us the format, codec details, and error message.
             You do not need to send the original file if it contains private content.
           </p>
@@ -423,7 +252,7 @@
   <footer>
     <div class="container">
       <p>© 2026 QianYang. All rights reserved.</p>
-      <p>Last updated: July 24, 2026</p>
+      <p><a href="./">Screening Room home</a> · Last updated: August 3, 2026</p>
     </div>
   </footer>
 </body>
