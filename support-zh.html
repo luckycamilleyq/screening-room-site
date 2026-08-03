@@ -3,8 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="私映（Screening Room）技术支持、常见问题与联系方式。">
-  <title>私映 - 技术支持</title>
+  <meta name="description" content="私映（Screening Room）iPhone 私密媒体播放器的技术支持、常见问题与联系方式。">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://luckycamilleyq.github.io/screening-room-site/support-zh.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://luckycamilleyq.github.io/screening-room-site/support-zh.html">
+  <link rel="alternate" hreflang="en" href="https://luckycamilleyq.github.io/screening-room-site/support-en.html">
+  <link rel="alternate" hreflang="x-default" href="https://luckycamilleyq.github.io/screening-room-site/support-en.html">
+  <title>私映技术支持与常见问题 | Screening Room</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -31,250 +36,75 @@
       }
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      background:
-        radial-gradient(circle at top, rgba(183, 121, 31, 0.10), transparent 32rem),
-        var(--bg);
+      background: radial-gradient(circle at top, rgba(183, 121, 31, 0.10), transparent 32rem), var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
-        "Helvetica Neue", Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
       line-height: 1.65;
     }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: var(--accent-hover);
-      text-decoration: underline;
-    }
-
-    .container {
-      width: min(920px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    header {
-      padding: 24px 0 8px;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    .language {
-      font-size: 14px;
-      color: var(--secondary);
-    }
-
-    .hero {
-      padding: 72px 0 44px;
-      text-align: center;
-    }
-
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); text-decoration: underline; }
+    .container { width: min(920px, calc(100% - 32px)); margin: 0 auto; }
+    header { padding: 24px 0 8px; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .brand { color: var(--text); text-decoration: none; font-weight: 700; letter-spacing: -0.02em; }
+    .language { font-size: 14px; color: var(--secondary); }
+    .hero { padding: 72px 0 44px; text-align: center; }
     .eyebrow {
-      display: inline-block;
-      margin-bottom: 14px;
-      padding: 6px 12px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      color: var(--secondary);
-      font-size: 14px;
-      background: var(--card);
+      display: inline-block; margin-bottom: 14px; padding: 6px 12px;
+      border: 1px solid var(--border); border-radius: 999px; color: var(--secondary);
+      font-size: 14px; background: var(--card);
     }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(38px, 7vw, 64px);
-      line-height: 1.08;
-      letter-spacing: -0.04em;
-    }
-
-    .subtitle {
-      max-width: 680px;
-      margin: 20px auto 0;
-      color: var(--secondary);
-      font-size: clamp(18px, 2.4vw, 22px);
-    }
-
-    .actions {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 28px;
-    }
-
+    h1 { margin: 0; font-size: clamp(38px, 7vw, 64px); line-height: 1.08; letter-spacing: -0.04em; }
+    .subtitle { max-width: 680px; margin: 20px auto 0; color: var(--secondary); font-size: clamp(18px, 2.4vw, 22px); }
+    .actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
     .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 0 20px;
-      border-radius: 12px;
-      font-weight: 600;
-      border: 1px solid var(--border);
-      background: var(--card);
+      display: inline-flex; align-items: center; justify-content: center; min-height: 46px;
+      padding: 0 20px; border-radius: 12px; font-weight: 600;
+      border: 1px solid var(--border); background: var(--card);
     }
-
-    .button.primary {
-      color: #fff;
-      background: var(--accent);
-      border-color: transparent;
-    }
-
-    .button.primary:hover {
-      color: #fff;
-      background: var(--accent-hover);
-      text-decoration: none;
-    }
-
-    main {
-      padding-bottom: 72px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
+    .button.primary { color: #fff; background: var(--accent); border-color: transparent; }
+    .button.primary:hover { color: #fff; background: var(--accent-hover); text-decoration: none; }
+    main { padding-bottom: 72px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
     .card {
-      padding: 28px;
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      background: var(--card);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
+      padding: 28px; border: 1px solid var(--border); border-radius: 22px;
+      background: var(--card); box-shadow: var(--shadow);
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
     }
-
-    .card.full {
-      grid-column: 1 / -1;
-    }
-
-    h2 {
-      margin: 0 0 12px;
-      font-size: 24px;
-      letter-spacing: -0.02em;
-    }
-
-    h3 {
-      margin: 24px 0 8px;
-      font-size: 18px;
-    }
-
-    p {
-      margin: 0 0 14px;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    ul, ol {
-      margin: 10px 0 0;
-      padding-left: 22px;
-    }
-
-    li + li {
-      margin-top: 8px;
-    }
-
-    details {
-      padding: 18px 0;
-      border-top: 1px solid var(--border);
-    }
-
-    details:first-of-type {
-      border-top: 0;
-      padding-top: 4px;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 600;
-      list-style: none;
-    }
-
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    summary::after {
-      content: "+";
-      float: right;
-      color: var(--secondary);
-      font-size: 20px;
-      line-height: 1;
-    }
-
-    details[open] summary::after {
-      content: "−";
-    }
-
-    details p {
-      margin-top: 12px;
-      color: var(--secondary);
-    }
-
-    .note {
-      color: var(--secondary);
-      font-size: 14px;
-    }
-
-    footer {
-      padding: 28px 0 42px;
-      color: var(--secondary);
-      font-size: 14px;
-      text-align: center;
-    }
+    .card.full { grid-column: 1 / -1; }
+    h2 { margin: 0 0 12px; font-size: 24px; letter-spacing: -0.02em; }
+    h3 { margin: 24px 0 8px; font-size: 18px; }
+    p { margin: 0 0 14px; }
+    p:last-child { margin-bottom: 0; }
+    ul, ol { margin: 10px 0 0; padding-left: 22px; }
+    li + li { margin-top: 8px; }
+    details { padding: 18px 0; border-top: 1px solid var(--border); }
+    details:first-of-type { border-top: 0; padding-top: 4px; }
+    summary { cursor: pointer; font-weight: 600; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; float: right; color: var(--secondary); font-size: 20px; line-height: 1; }
+    details[open] summary::after { content: "−"; }
+    details p { margin-top: 12px; color: var(--secondary); }
+    .note { color: var(--secondary); font-size: 14px; }
+    footer { padding: 28px 0 42px; color: var(--secondary); font-size: 14px; text-align: center; }
 
     @media (max-width: 720px) {
-      .hero {
-        padding-top: 52px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .card.full {
-        grid-column: auto;
-      }
-
-      .card {
-        padding: 22px;
-        border-radius: 18px;
-      }
+      .hero { padding-top: 52px; }
+      .grid { grid-template-columns: 1fr; }
+      .card.full { grid-column: auto; }
+      .card { padding: 22px; border-radius: 18px; }
     }
-</style>
+  </style>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <div class="brand">私映 · Screening Room</div>
-      <div class="language"><a href="support-en.html">English</a></div>
+      <a class="brand" href="./">私映 · Screening Room</a>
+      <div class="language"><a href="support-en.html" lang="en">English</a></div>
     </div>
   </header>
 
@@ -283,12 +113,11 @@
       <div class="eyebrow">技术支持</div>
       <h1>我们随时为你提供帮助</h1>
       <p class="subtitle">
-        私映是一款“文件不搬家”的隐私播放器。照片和视频可在原位置加密保存，
-        并通过 Face ID、Touch ID 或密码解锁播放。
+        私映是一款面向 iPhone 的“文件不搬家”私密媒体播放器。照片和视频可在用户选择的存储位置中加密保存，
+        并通过 Face ID、Touch ID 或 App 密码解锁播放。
       </p>
       <div class="actions">
         <a class="button primary" href="mailto:yqdevsupport@gmail.com?subject=%E7%A7%81%E6%98%A0%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81">联系技术支持</a>
-        <!-- 如你的隐私政策文件名不同，请修改下面的链接 -->
         <a class="button" href="privacy-zh.html">查看隐私政策</a>
       </div>
     </div>
@@ -306,8 +135,8 @@
       <section class="card">
         <h2>反馈问题时请提供</h2>
         <ul>
-          <li>iPhone 或 iPad 型号</li>
-          <li>iOS / iPadOS 版本</li>
+          <li>iPhone 型号</li>
+          <li>iOS 版本</li>
           <li>私映 App 版本</li>
           <li>文件来源，例如本机、iCloud Drive、NAS 或其他网盘</li>
           <li>文件格式、大小及可复现的操作步骤</li>
@@ -321,7 +150,7 @@
         <details>
           <summary>私映会上传我的照片或视频吗？</summary>
           <p>
-            私映的核心处理在设备本地完成。文件可以继续保留在“文件”App、iCloud Drive、
+            私映的核心处理在 iPhone 本地完成。文件可以继续保留在“文件”App、iCloud Drive、
             NAS 或受支持的网盘位置中，无需统一搬入 App 的私有空间。
             具体数据处理方式请查看隐私政策。
           </p>
@@ -338,7 +167,7 @@
         <details>
           <summary>Face ID 或 Touch ID 无法使用怎么办？</summary>
           <p>
-            请先确认系统已为私映开启生物识别权限，并检查设备是否已录入 Face ID 或 Touch ID。
+            请先确认系统已为私映开启生物识别权限，并检查 iPhone 是否已录入 Face ID 或 Touch ID。
             你也可以使用 App 密码进行解锁。
           </p>
         </details>
@@ -360,9 +189,9 @@
         </details>
 
         <details>
-          <summary>更换设备后如何继续使用？</summary>
+          <summary>更换 iPhone 后如何继续使用？</summary>
           <p>
-            请确保原始加密文件已完整同步到新设备可访问的位置，并妥善保留密码和恢复码。
+            请确保原始加密文件已完整同步到新 iPhone 可访问的位置，并妥善保留密码和恢复码。
             App 内购买项目可使用相同 Apple ID 在 App 内执行“恢复购买”。
           </p>
         </details>
@@ -388,7 +217,7 @@
         <details>
           <summary>支持哪些文件格式？</summary>
           <p>
-            实际播放能力会受到 iOS 系统、文件编码方式、封装格式及设备性能影响。
+            实际播放能力会受到 iOS 系统、文件编码方式、封装格式及 iPhone 性能影响。
             遇到无法播放的文件时，请将文件格式、编码信息和错误提示发送给我们，
             无需发送包含隐私内容的原始文件。
           </p>
@@ -410,7 +239,7 @@
   <footer>
     <div class="container">
       <p>© 2026 QianYang. All rights reserved.</p>
-      <p>最后更新：2026 年 7 月 24 日</p>
+      <p><a href="./">返回私映官网</a> · 最后更新：2026 年 8 月 3 日</p>
     </div>
   </footer>
 </body>
