@@ -20,10 +20,6 @@ Screening Room, also known as 私映, is an iPhone media player for encrypting a
 - No developer-operated account is required.
 - Ordinary playback, encryption, and decryption do not automatically upload user files to developer-controlled servers.
 
-## Important security disclosure
-
-Every .efl encrypted file created by Screening Room contains developer-managed escrow recovery data. A party possessing the corresponding developer private key may, after obtaining the relevant file, have the technical ability to recover its file-encryption key. Read the full Privacy Policy for the complete disclosure, limitations, and support process.
-
 ## Publisher
 
 - Developer: QianYang
