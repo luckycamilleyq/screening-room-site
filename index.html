@@ -1,13 +1,431 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Screening Room / 私映 Privacy Policy"><title>Screening Room / 私映</title><style>
-:root{color-scheme:light dark;--bg:#f5f5f7;--card:#fff;--text:#1d1d1f;--muted:#6e6e73;--line:#d2d2d7;--link:#06c;--soft:#eef5ff}
-@media(prefers-color-scheme:dark){:root{--bg:#000;--card:#1c1c1e;--text:#f5f5f7;--muted:#a1a1a6;--line:#38383a;--link:#2997ff;--soft:#0d223b}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;line-height:1.72}
-main{width:min(900px,calc(100% - 32px));margin:auto;padding:40px 0 72px}.topbar{display:flex;justify-content:flex-end;margin-bottom:14px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:42px;box-shadow:0 12px 40px rgba(0,0,0,.06)}
-h1{margin:0 0 8px;font-size:clamp(30px,5vw,42px);line-height:1.18}h2{margin:34px 0 10px;font-size:22px}h3{margin:25px 0 8px;font-size:18px}
-p{margin:10px 0}ul{padding-left:25px}.meta{color:var(--muted);margin-bottom:26px}.summary{background:var(--soft);border-radius:14px;padding:18px 20px;margin:24px 0}
-a{color:var(--link);text-decoration:none}.language-link{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border:1px solid var(--line);border-radius:999px;background:var(--card);font-weight:600}
-.contact{padding:18px 20px;border:1px solid var(--line);border-radius:14px}footer{color:var(--muted);text-align:center;font-size:13px;margin-top:24px}
-.choice{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}.choice a{display:block;padding:22px;border:1px solid var(--line);border-radius:16px;text-align:center;font-size:18px;font-weight:650;background:var(--card)}
-@media(max-width:640px){main{width:min(100% - 20px,900px);padding:18px 0 44px}.card{padding:26px 20px;border-radius:18px}.choice{grid-template-columns:1fr}}
-</style></head><body><main><article class="card"><h1>Screening Room / 私映</h1><p class="meta">Privacy Policy · 隐私政策</p><p>请选择语言 / Choose a language</p><div class="choice"><a href="privacy-zh.html">中文隐私政策</a><a href="privacy-en.html">English Privacy Policy</a></div></article><footer>Screening Room / 私映 · QianYang</footer></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Screening Room is a private media player for iPhone that encrypts and plays videos directly from Files, iCloud Drive, NAS, and other storage providers—without importing them into a separate vault.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#08090c">
+  <link rel="canonical" href="https://luckycamilleyq.github.io/screening-room-site/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Screening Room — Private Media Player for iPhone</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Screening Room">
+  <meta property="og:title" content="Screening Room — Private Media Player for iPhone">
+  <meta property="og:description" content="Encrypt and play private videos where they already live—in Files, iCloud Drive, NAS, and compatible storage providers.">
+  <meta property="og:url" content="https://luckycamilleyq.github.io/screening-room-site/">
+  <meta name="twitter:card" content="summary">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Screening Room",
+    "alternateName": "私映",
+    "description": "A private media player for iPhone that encrypts and plays videos directly from Files, iCloud Drive, NAS, and compatible storage providers without importing them into a separate vault.",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "iOS",
+    "url": "https://luckycamilleyq.github.io/screening-room-site/",
+    "author": {
+      "@type": "Person",
+      "name": "QianYang"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08090c;
+      --bg-soft: #101116;
+      --card: rgba(255, 255, 255, 0.055);
+      --card-strong: rgba(255, 255, 255, 0.085);
+      --text: #f7f4ee;
+      --muted: #aaa8a5;
+      --line: rgba(255, 255, 255, 0.12);
+      --gold: #d49a43;
+      --gold-light: #f1bd68;
+      --gold-ink: #251703;
+      --red: #41151e;
+      --red-light: #6e2431;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 50% 3%, rgba(212, 154, 67, 0.09), transparent 27rem),
+        var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+    .skip-link {
+      position: fixed; top: 10px; left: 10px; z-index: 100;
+      padding: 10px 14px; border-radius: 10px; background: var(--gold-light); color: #171008;
+      transform: translateY(-160%); transition: transform .2s;
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    header {
+      position: sticky; top: 0; z-index: 20;
+      border-bottom: 1px solid transparent;
+      background: rgba(8, 9, 12, 0.76);
+      backdrop-filter: blur(18px) saturate(130%);
+      -webkit-backdrop-filter: blur(18px) saturate(130%);
+    }
+    nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 720; letter-spacing: -0.02em; }
+    .brand-mark {
+      width: 35px; height: 35px; display: grid; place-items: center; border: 1px solid rgba(241, 189, 104, .25);
+      border-radius: 11px; background: linear-gradient(145deg, #11141a, #090a0d); box-shadow: inset 0 0 20px rgba(212, 154, 67, .08);
+    }
+    .brand-mark::before {
+      content: ""; width: 0; height: 0; margin-left: 3px;
+      border-top: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 11px solid var(--gold-light);
+      filter: drop-shadow(0 0 6px rgba(241, 189, 104, .5));
+    }
+    .nav-links { display: flex; align-items: center; gap: 26px; font-size: 14px; color: var(--muted); }
+    .nav-links a { text-decoration: none; transition: color .2s; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--text); }
+    .language { padding: 7px 11px; border: 1px solid var(--line); border-radius: 999px; color: var(--text) !important; }
+
+    .hero { position: relative; min-height: 760px; display: grid; align-items: center; isolation: isolate; }
+    .hero::before, .hero::after {
+      content: ""; position: absolute; top: 0; bottom: 0; z-index: -2; width: min(32vw, 480px); pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(8, 9, 12, .1), transparent 19%),
+        repeating-linear-gradient(88deg, rgba(255,255,255,.025) 0 3%, rgba(0,0,0,.13) 6% 11%),
+        linear-gradient(90deg, #210a10, var(--red-light) 62%, #1f080e);
+      box-shadow: inset -45px 0 75px rgba(0,0,0,.6), 28px 0 100px rgba(0,0,0,.42);
+    }
+    .hero::before { left: -5vw; clip-path: polygon(0 0, 100% 0, 72% 50%, 100% 100%, 0 100%); }
+    .hero::after { right: -5vw; transform: scaleX(-1); clip-path: polygon(0 0, 100% 0, 72% 50%, 100% 100%, 0 100%); }
+    .hero-content { max-width: 770px; margin: 0 auto; padding: 112px 0 106px; text-align: center; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; margin-bottom: 22px; padding: 7px 12px;
+      border: 1px solid rgba(212,154,67,.25); border-radius: 999px; color: var(--gold-light); background: rgba(212,154,67,.07);
+      font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    }
+    h1, h2, h3 { margin-top: 0; letter-spacing: -0.035em; }
+    h1 { margin-bottom: 24px; font-size: clamp(54px, 8.3vw, 102px); line-height: .96; font-weight: 780; }
+    h1 span { display: block; color: var(--gold-light); font-family: Georgia, "Times New Roman", serif; font-size: .58em; font-style: italic; font-weight: 400; line-height: 1.28; }
+    .hero-copy { max-width: 660px; margin: 0 auto 34px; color: #c5c1bb; font-size: clamp(18px, 2.2vw, 22px); line-height: 1.55; }
+    .actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+    .button {
+      display: inline-flex; min-height: 50px; align-items: center; justify-content: center; gap: 9px;
+      padding: 0 21px; border: 1px solid var(--line); border-radius: 14px; text-decoration: none; font-size: 15px; font-weight: 680;
+      background: rgba(255,255,255,.05); transition: transform .2s, border-color .2s, background .2s;
+    }
+    .button:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.25); background: rgba(255,255,255,.08); }
+    .button.primary { border-color: transparent; background: linear-gradient(135deg, var(--gold-light), var(--gold)); color: var(--gold-ink); box-shadow: 0 12px 35px rgba(212,154,67,.2); }
+    .button .apple { font-size: 20px; line-height: 1; }
+    .availability { margin: 16px 0 0; color: #888681; font-size: 12px; }
+
+    .trust-strip { border-block: 1px solid var(--line); background: rgba(255,255,255,.018); }
+    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .trust-item { padding: 28px 24px; border-right: 1px solid var(--line); }
+    .trust-item:last-child { border-right: 0; }
+    .trust-item strong { display: block; margin-bottom: 2px; font-size: 15px; }
+    .trust-item span { color: var(--muted); font-size: 13px; }
+
+    section { padding: 112px 0; }
+    .section-head { max-width: 720px; margin-bottom: 50px; }
+    .section-head .kicker { margin: 0 0 12px; color: var(--gold-light); font-size: 12px; font-weight: 740; letter-spacing: .14em; text-transform: uppercase; }
+    h2 { margin-bottom: 18px; font-size: clamp(38px, 5vw, 62px); line-height: 1.05; }
+    .section-head > p:last-child { margin: 0; color: var(--muted); font-size: 18px; }
+
+    .difference { background: linear-gradient(180deg, var(--bg) 0, var(--bg-soft) 48%, var(--bg) 100%); }
+    .feature-grid { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 16px; }
+    .feature-card {
+      min-height: 290px; padding: 30px; border: 1px solid var(--line); border-radius: 24px; background: var(--card);
+      box-shadow: inset 0 1px rgba(255,255,255,.035); transition: transform .25s, border-color .25s;
+    }
+    .feature-card:hover { transform: translateY(-4px); border-color: rgba(212,154,67,.3); }
+    .feature-card:first-child { background: linear-gradient(145deg, rgba(212,154,67,.12), rgba(255,255,255,.035)); }
+    .icon {
+      width: 48px; height: 48px; display: grid; place-items: center; margin-bottom: 54px;
+      border: 1px solid rgba(212,154,67,.25); border-radius: 15px; background: rgba(212,154,67,.08); color: var(--gold-light); font-size: 22px;
+    }
+    .feature-card h3 { margin-bottom: 10px; font-size: 23px; }
+    .feature-card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    .workflow { display: grid; grid-template-columns: .82fr 1.18fr; gap: 70px; align-items: start; }
+    .workflow .section-head { position: sticky; top: 110px; margin: 0; }
+    .steps { counter-reset: step; }
+    .step { position: relative; display: grid; grid-template-columns: 58px 1fr; gap: 22px; padding: 0 0 48px; }
+    .step:not(:last-child)::after { content: ""; position: absolute; top: 58px; bottom: 0; left: 28px; width: 1px; background: linear-gradient(var(--gold), var(--line)); }
+    .step-number {
+      width: 58px; height: 58px; display: grid; place-items: center; z-index: 1; border: 1px solid rgba(212,154,67,.28); border-radius: 18px;
+      background: #111116; color: var(--gold-light); font-family: Georgia, serif; font-size: 21px;
+    }
+    .step h3 { margin: 4px 0 7px; font-size: 24px; }
+    .step p { margin: 0; color: var(--muted); }
+
+    .privacy-panel {
+      position: relative; overflow: hidden; display: grid; grid-template-columns: .95fr 1.05fr; gap: 55px;
+      padding: 58px; border: 1px solid rgba(212,154,67,.25); border-radius: 32px;
+      background: linear-gradient(135deg, rgba(74,22,31,.6), rgba(17,17,22,.92) 60%);
+    }
+    .privacy-panel::after { content: ""; position: absolute; right: -100px; bottom: -140px; width: 360px; height: 360px; border: 1px solid rgba(212,154,67,.12); border-radius: 50%; box-shadow: 0 0 100px rgba(212,154,67,.08); }
+    .privacy-panel h2 { margin-bottom: 18px; font-size: clamp(36px, 4.3vw, 56px); }
+    .privacy-panel .intro { color: #c6c1ba; }
+    .facts { display: grid; gap: 13px; align-content: center; }
+    .fact { display: flex; gap: 14px; padding: 16px 18px; border: 1px solid rgba(255,255,255,.1); border-radius: 16px; background: rgba(0,0,0,.16); }
+    .check { color: var(--gold-light); font-weight: 800; }
+    .fact p { margin: 0; color: #d3cec6; font-size: 14px; }
+    .privacy-link { display: inline-block; margin-top: 18px; color: var(--gold-light); text-underline-offset: 4px; }
+
+    .use-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .use-card { padding: 28px; border-top: 1px solid rgba(212,154,67,.55); background: linear-gradient(180deg, rgba(212,154,67,.07), transparent 72%); }
+    .use-card h3 { margin-bottom: 8px; font-size: 20px; }
+    .use-card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .faq-list { max-width: 860px; }
+    details { border-bottom: 1px solid var(--line); }
+    summary { position: relative; padding: 23px 42px 23px 0; cursor: pointer; list-style: none; font-weight: 650; font-size: 18px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; position: absolute; right: 5px; top: 20px; color: var(--gold-light); font-size: 25px; font-weight: 300; transition: transform .2s; }
+    details[open] summary::after { transform: rotate(45deg); }
+    details p { max-width: 720px; margin: -4px 0 24px; color: var(--muted); }
+
+    .final-cta { padding-top: 35px; text-align: center; }
+    .final-cta .panel { padding: 74px 28px; border: 1px solid var(--line); border-radius: 30px; background: radial-gradient(circle at 50% 0, rgba(212,154,67,.13), transparent 55%), var(--card); }
+    .final-cta h2 { max-width: 760px; margin: 0 auto 18px; }
+    .final-cta p { max-width: 620px; margin: 0 auto 30px; color: var(--muted); font-size: 17px; }
+
+    footer { padding: 40px 0 50px; color: #85827e; font-size: 13px; }
+    .footer-row { display: flex; justify-content: space-between; gap: 24px; padding-top: 28px; border-top: 1px solid var(--line); }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
+    .footer-links a { text-underline-offset: 3px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+    @media (max-width: 900px) {
+      .hero { min-height: 690px; }
+      .hero::before, .hero::after { width: 38vw; opacity: .7; }
+      .trust-grid { grid-template-columns: 1fr 1fr; }
+      .trust-item:nth-child(2) { border-right: 0; }
+      .trust-item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .feature-grid { grid-template-columns: 1fr 1fr; }
+      .feature-card:first-child { grid-column: 1 / -1; }
+      .workflow { grid-template-columns: 1fr; gap: 45px; }
+      .workflow .section-head { position: static; }
+      .privacy-panel { grid-template-columns: 1fr; padding: 42px; }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: min(100% - 28px, var(--max)); }
+      nav { min-height: 62px; }
+      .nav-links a:not(.language) { display: none; }
+      .hero { min-height: 660px; }
+      .hero::before, .hero::after { width: 47vw; opacity: .48; }
+      .hero-content { padding: 92px 0 80px; }
+      h1 { font-size: clamp(48px, 16vw, 70px); }
+      h1 span { font-size: .48em; }
+      .hero-copy { font-size: 17px; }
+      section { padding: 82px 0; }
+      .trust-item { padding: 22px 14px; }
+      .feature-grid, .use-grid { grid-template-columns: 1fr; }
+      .feature-card:first-child { grid-column: auto; }
+      .feature-card { min-height: 250px; }
+      .icon { margin-bottom: 35px; }
+      .privacy-panel { padding: 30px 24px; border-radius: 24px; }
+      .footer-row { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Screening Room home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Screening Room</span>
+      </a>
+      <div class="nav-links">
+        <a href="#why">Why it’s different</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#faq">FAQ</a>
+        <a class="language" href="privacy-zh.html" lang="zh-CN">中文</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-content wrap">
+        <div class="eyebrow">Private media player for iPhone</div>
+        <h1>Screening Room <span>Your files. Their place. Your privacy.</span></h1>
+        <p class="hero-copy">Encrypt and play private videos directly from Files, iCloud Drive, NAS, and compatible storage providers—without importing them into a separate vault.</p>
+        <div class="actions">
+          <a class="button primary" href="#availability" aria-label="App Store availability">
+            <span class="apple" aria-hidden="true">●</span>
+            Coming soon on the App Store
+          </a>
+          <a class="button" href="#why">See how it works</a>
+        </div>
+        <p class="availability">One-time purchase planned. No account required.</p>
+      </div>
+    </section>
+
+    <div class="trust-strip" aria-label="Core product principles">
+      <div class="trust-grid wrap">
+        <div class="trust-item"><strong>Stays in place</strong><span>No separate media vault</span></div>
+        <div class="trust-item"><strong>On-device encryption</strong><span>Files are processed locally</span></div>
+        <div class="trust-item"><strong>Face ID access</strong><span>Unlock before you watch</span></div>
+        <div class="trust-item"><strong>No developer account</strong><span>Open the app and use it</span></div>
+      </div>
+    </div>
+
+    <section class="difference" id="why">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">A player, not a vault</p>
+          <h2>Privacy without moving your library.</h2>
+          <p>Most private-video apps ask you to import everything into an isolated container. Screening Room makes protection part of the playback experience, so your storage organization remains yours.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="icon" aria-hidden="true">⌂</div>
+            <h3>Files stay where you chose</h3>
+            <p>Keep encrypted media in its existing Files folder, iCloud Drive location, NAS share, or compatible cloud provider. No second library to maintain.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon" aria-hidden="true">▶</div>
+            <h3>Private playback</h3>
+            <p>Watch inside Screening Room after Face ID or password unlock. Media opened through the app does not appear as a standard preview entry in Files Recents.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon" aria-hidden="true">◇</div>
+            <h3>Built for Apple Files</h3>
+            <p>Work with the locations already exposed through the iOS Files app, including iCloud Drive, NAS, and supported third-party file providers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="workflow-title">
+      <div class="workflow wrap">
+        <div class="section-head">
+          <p class="kicker">How it works</p>
+          <h2 id="workflow-title">Three steps from file to private viewing.</h2>
+          <p>No upload, migration, or account setup is required for ordinary use.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <div class="step-number" aria-hidden="true">01</div>
+            <div><h3>Choose a file</h3><p>Select a video or photo from Files, iCloud Drive, your NAS, or another compatible storage provider.</p></div>
+          </article>
+          <article class="step">
+            <div class="step-number" aria-hidden="true">02</div>
+            <div><h3>Encrypt on your device</h3><p>Screening Room creates an <code>.efl</code> encrypted file locally and keeps it in the storage location you selected.</p></div>
+          </article>
+          <article class="step">
+            <div class="step-number" aria-hidden="true">03</div>
+            <div><h3>Unlock and play</h3><p>Use Face ID or your app password to open the private player whenever you want to watch.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" aria-labelledby="privacy-title">
+      <div class="wrap">
+        <div class="privacy-panel">
+          <div>
+            <p class="eyebrow">Transparent by design</p>
+            <h2 id="privacy-title">Your media is not our business.</h2>
+            <p class="intro">Ordinary encryption, decryption, and playback happen on your iPhone. Screening Room does not automatically upload your files to developer-controlled servers.</p>
+            <a class="privacy-link" href="privacy-en.html">Read the complete privacy policy →</a>
+          </div>
+          <div class="facts">
+            <div class="fact"><span class="check" aria-hidden="true">✓</span><p>No developer-operated account is required.</p></div>
+            <div class="fact"><span class="check" aria-hidden="true">✓</span><p>No advertising SDKs and no cross-app tracking.</p></div>
+            <div class="fact"><span class="check" aria-hidden="true">✓</span><p>Face ID is handled by Apple; the app receives only the authentication result.</p></div>
+            <div class="fact"><span class="check" aria-hidden="true">i</span><p>Every <code>.efl</code> file contains developer-managed escrow recovery data. Read the privacy policy for the exact recovery model and limitations.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="use-cases-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Made for real storage</p>
+          <h2 id="use-cases-title">One private player, wherever your media lives.</h2>
+        </div>
+        <div class="use-grid">
+          <article class="use-card"><h3>iCloud Drive</h3><p>Protect personal videos while keeping them inside the folders and sync workflow you already use.</p></article>
+          <article class="use-card"><h3>NAS &amp; network storage</h3><p>Play supported encrypted media selected through compatible iOS file providers without building a separate on-device vault.</p></article>
+          <article class="use-card"><h3>Local Files</h3><p>Keep private media on your iPhone, unlock it with Face ID, and avoid standard preview entries in Files Recents.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Common questions</p>
+          <h2 id="faq-title">Private video playback, explained.</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Does Screening Room import videos into a private vault?</summary>
+            <p>No. Screening Room is designed to encrypt and play files in the storage location you choose, rather than maintaining a separate media vault inside the app.</p>
+          </details>
+          <details>
+            <summary>Can I use it with iCloud Drive or a NAS?</summary>
+            <p>Yes. Screening Room works with user-selected locations exposed through the iOS Files system, including iCloud Drive, NAS connections, and compatible third-party file providers.</p>
+          </details>
+          <details>
+            <summary>Will videos appear in Files Recents after I watch them?</summary>
+            <p>Media viewed through Screening Room is not added as a standard file-preview entry in Files Recents. The encrypted file itself may still be visible in Files according to the location and Files app behavior.</p>
+          </details>
+          <details>
+            <summary>Does Screening Room upload my files?</summary>
+            <p>Not during ordinary use. File encryption, decryption, and playback are performed on your device, and the app does not automatically upload your media to developer-controlled servers. Voluntary support and recovery requests are described in the privacy policy.</p>
+          </details>
+          <details>
+            <summary>Is Screening Room a zero-knowledge encryption service?</summary>
+            <p>No. Each <code>.efl</code> file contains developer-managed escrow recovery data. A party with the corresponding developer private key may be technically able to recover the file key after obtaining the encrypted file. See the privacy policy for full details.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" id="availability" aria-labelledby="availability-title">
+      <div class="wrap panel">
+        <p class="kicker">Coming to iPhone</p>
+        <h2 id="availability-title">Keep the library you have. Add the privacy you need.</h2>
+        <p>Screening Room is preparing for release on the App Store. For availability questions or technical support, contact the developer.</p>
+        <div class="actions">
+          <a class="button primary" href="mailto:yqdevsupport@gmail.com?subject=Screening%20Room%20availability">Contact QianYang</a>
+          <a class="button" href="support-en.html">Support &amp; FAQ</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-row wrap">
+      <div>© 2026 QianYang · Screening Room / 私映</div>
+      <div class="footer-links">
+        <a href="privacy-en.html">Privacy</a>
+        <a href="support-en.html">Support</a>
+        <a href="privacy-zh.html" lang="zh-CN">中文隐私政策</a>
+        <a href="support-zh.html" lang="zh-CN">中文支持</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

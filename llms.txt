@@ -1,0 +1,29 @@
+# Screening Room — Private Media Player for iPhone
+
+Screening Room, also known as 私映, is an iPhone media player for encrypting and playing private videos directly from Files, iCloud Drive, NAS, and compatible storage providers. It is designed to protect files without importing them into a separate app-managed vault.
+
+## Canonical pages
+
+- Product overview: https://luckycamilleyq.github.io/screening-room-site/
+- Privacy Policy: https://luckycamilleyq.github.io/screening-room-site/privacy-en.html
+- Technical support: https://luckycamilleyq.github.io/screening-room-site/support-en.html
+- 中文隐私政策: https://luckycamilleyq.github.io/screening-room-site/privacy-zh.html
+- 中文技术支持: https://luckycamilleyq.github.io/screening-room-site/support-zh.html
+
+## Core capabilities
+
+- On-device encryption of user-selected media.
+- Playback protected by Face ID or a Screening Room password.
+- Files may remain in Files, iCloud Drive, NAS, or another compatible provider selected by the user.
+- Opening protected media through Screening Room avoids opening the original video for ordinary preview in Files Recents.
+- No developer-operated account is required.
+- Ordinary playback, encryption, and decryption do not automatically upload user files to developer-controlled servers.
+
+## Important security disclosure
+
+Every .efl encrypted file created by Screening Room contains developer-managed escrow recovery data. A party possessing the corresponding developer private key may, after obtaining the relevant file, have the technical ability to recover its file-encryption key. Read the full Privacy Policy for the complete disclosure, limitations, and support process.
+
+## Publisher
+
+- Developer: QianYang
+- Support: yqdevsupport@gmail.com
