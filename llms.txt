@@ -5,6 +5,7 @@ Screening Room, also known as 私映, is an iPhone media player for encrypting a
 ## Canonical pages
 
 - Product overview: https://luckycamilleyq.github.io/screening-room-site/
+- App Store listing: https://apps.apple.com/us/app/screening-room/id6792022324
 - Privacy Policy: https://luckycamilleyq.github.io/screening-room-site/privacy-en.html
 - Technical support: https://luckycamilleyq.github.io/screening-room-site/support-en.html
 - 中文隐私政策: https://luckycamilleyq.github.io/screening-room-site/privacy-zh.html
