@@ -152,9 +152,9 @@
     .hero-art::before { width: 430px; height: 430px; border: 1px solid rgba(255,195,92,.12); box-shadow: 0 0 95px rgba(226,132,19,.1), inset 0 0 80px rgba(255,174,56,.05); }
     .hero-art::after { width: 350px; height: 350px; background: radial-gradient(circle, rgba(255,165,42,.2), transparent 68%); filter: blur(16px); }
     .app-icon {
-      position: relative; z-index: 1; width: min(29vw, 326px); aspect-ratio: 1; border-radius: 25%; object-fit: cover;
+      position: relative; z-index: 1; display: block; width: min(29vw, 320px); height: auto; aspect-ratio: 1 / 1;
+      border-radius: 24%; object-fit: contain;
       box-shadow: 0 34px 90px rgba(0,0,0,.62), 0 0 42px rgba(235,145,28,.18), inset 0 0 0 1px rgba(255,255,255,.08);
-      transform: rotate(1.5deg);
     }
 
     .trust-strip { border-block: 1px solid var(--line); background: rgba(5,12,30,.74); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
@@ -395,7 +395,6 @@
             <div class="fact"><span class="check" aria-hidden="true">✓</span><p>No developer-operated account is required.</p></div>
             <div class="fact"><span class="check" aria-hidden="true">✓</span><p>No advertising SDKs and no cross-app tracking.</p></div>
             <div class="fact"><span class="check" aria-hidden="true">✓</span><p>Face ID is handled by Apple; the app receives only the authentication result.</p></div>
-            <div class="fact"><span class="check" aria-hidden="true">i</span><p>Every <code>.efl</code> file contains developer-managed escrow recovery data. Read the privacy policy for the exact recovery model and limitations.</p></div>
           </div>
         </div>
       </div>
@@ -436,11 +435,7 @@
           </details>
           <details>
             <summary>Does Screening Room upload my files?</summary>
-            <p>Not during ordinary use. File encryption, decryption, and playback are performed on your device, and the app does not automatically upload your media to developer-controlled servers. Voluntary support and recovery requests are described in the privacy policy.</p>
-          </details>
-          <details>
-            <summary>Is Screening Room a zero-knowledge encryption service?</summary>
-            <p>No. Each <code>.efl</code> file contains developer-managed escrow recovery data. A party with the corresponding developer private key may be technically able to recover the file key after obtaining the encrypted file. See the privacy policy for full details.</p>
+            <p>No. File encryption, decryption, and playback are performed on your device, and the app does not automatically upload your media to developer-controlled servers.</p>
           </details>
         </div>
       </div>
