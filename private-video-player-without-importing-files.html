@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Looking for a private video player without importing files? Compare a traditional video vault with Screening Room's storage-in-place encryption workflow on iPhone.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <meta name="theme-color" content="#050811">
+  <link rel="canonical" href="https://luckycamilleyq.github.io/screening-room-site/private-video-player-without-importing-files.html">
+  <link rel="icon" href="app-icon-64.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="app-icon-180.png" sizes="180x180">
+  <title>Private Video Player Without Importing Files | Screening Room</title>
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Screening Room">
+  <meta property="og:title" content="Private Video Player Without Importing Files">
+  <meta property="og:description" content="See how Screening Room adds encrypted private playback without building a separate app-managed video vault.">
+  <meta property="og:url" content="https://luckycamilleyq.github.io/screening-room-site/private-video-player-without-importing-files.html">
+  <meta property="og:image" content="https://luckycamilleyq.github.io/screening-room-site/app-icon-512.jpg">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="Screening Room app icon with blue theater curtains and an amber play button">
+  <meta property="article:published_time" content="2026-08-04">
+  <meta property="article:modified_time" content="2026-08-04">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Private Video Player Without Importing Files">
+  <meta name="twitter:description" content="A practical comparison of video vaults and storage-in-place encryption on iPhone.">
+  <meta name="twitter:image" content="https://luckycamilleyq.github.io/screening-room-site/app-icon-512.jpg">
+  <meta name="twitter:image:alt" content="Screening Room app icon with blue theater curtains and an amber play button">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Private Video Player Without Importing Files",
+    "description": "A practical comparison of traditional video vaults and Screening Room's storage-in-place encryption workflow on iPhone.",
+    "datePublished": "2026-08-04",
+    "dateModified": "2026-08-04",
+    "mainEntityOfPage": "https://luckycamilleyq.github.io/screening-room-site/private-video-player-without-importing-files.html",
+    "image": "https://luckycamilleyq.github.io/screening-room-site/app-icon-512.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "QianYang"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "QianYang"
+    },
+    "about": [
+      "Private video player without importing files",
+      "Video vault alternatives",
+      "In-place encryption",
+      "Screening Room"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #040712;
+      --bg-soft: #091124;
+      --card: rgba(255, 255, 255, 0.055);
+      --text: #f7f4ee;
+      --muted: #a9afbd;
+      --line: rgba(255, 255, 255, 0.12);
+      --gold: #df922b;
+      --gold-light: #ffc35c;
+      --max: 860px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 50% 0, rgba(18, 55, 125, .18), transparent 34rem),
+        linear-gradient(180deg, #050918 0, #040712 42rem),
+        var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--gold-light); text-underline-offset: 4px; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+    .skip-link {
+      position: fixed; top: 10px; left: 10px; z-index: 100; padding: 10px 14px;
+      border-radius: 10px; background: var(--gold-light); color: #171008;
+      transform: translateY(-160%); transition: transform .2s;
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    header {
+      position: sticky; top: 0; z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(4, 7, 18, .82);
+      backdrop-filter: blur(18px) saturate(130%);
+      -webkit-backdrop-filter: blur(18px) saturate(130%);
+    }
+    nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--text); text-decoration: none; font-weight: 720; }
+    .brand img { width: 38px; height: 38px; border-radius: 11px; }
+    .app-store { padding: 9px 14px; border: 1px solid rgba(255,195,92,.3); border-radius: 999px; text-decoration: none; font-size: 14px; font-weight: 650; }
+
+    main { padding: 76px 0 92px; }
+    .breadcrumb { margin: 0 0 28px; color: var(--muted); font-size: 14px; }
+    .breadcrumb a { color: var(--muted); }
+    .eyebrow { margin: 0 0 14px; color: var(--gold-light); font-size: 12px; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+    h1, h2, h3 { letter-spacing: -.028em; }
+    h1 { max-width: 820px; margin: 0 0 24px; font-size: clamp(42px, 7vw, 68px); line-height: 1.04; }
+    .lead { margin: 0 0 20px; color: #c9ccd4; font-size: clamp(19px, 2.4vw, 23px); line-height: 1.58; }
+    .meta { margin: 0 0 42px; color: #858c9b; font-size: 13px; }
+
+    .note {
+      margin: 34px 0 48px; padding: 22px 24px;
+      border: 1px solid rgba(255,195,92,.28); border-radius: 18px;
+      background: linear-gradient(135deg, rgba(223,146,43,.12), rgba(9,17,36,.74));
+    }
+    .note strong { color: var(--gold-light); }
+    .note p { margin: 8px 0 0; }
+
+    article h2 { margin: 54px 0 16px; font-size: clamp(30px, 4.5vw, 42px); line-height: 1.15; }
+    article h3 { margin: 30px 0 10px; font-size: 22px; }
+    article p { margin: 14px 0; color: #c5c9d2; }
+    article ul, article ol { margin: 16px 0; padding-left: 25px; color: #c5c9d2; }
+    article li + li { margin-top: 10px; }
+    article code { padding: 2px 6px; border: 1px solid var(--line); border-radius: 6px; background: rgba(255,255,255,.05); color: #f6d9a3; }
+
+    .steps { counter-reset: guide-step; display: grid; gap: 14px; margin: 24px 0; padding: 0; list-style: none; }
+    .steps li { counter-increment: guide-step; position: relative; padding: 20px 22px 20px 66px; border: 1px solid var(--line); border-radius: 17px; background: var(--card); }
+    .steps li::before {
+      content: counter(guide-step); position: absolute; left: 20px; top: 18px;
+      width: 30px; height: 30px; display: grid; place-items: center;
+      border: 1px solid rgba(255,195,92,.35); border-radius: 10px; color: var(--gold-light); font-weight: 750;
+    }
+
+    .faq { margin-top: 54px; }
+    details { border-bottom: 1px solid var(--line); }
+    summary { padding: 21px 38px 21px 0; cursor: pointer; list-style: none; font-weight: 670; }
+    summary::-webkit-details-marker { display: none; }
+    details p { margin: -2px 0 22px; }
+
+    .cta {
+      margin-top: 62px; padding: 38px 30px; border: 1px solid var(--line); border-radius: 24px; text-align: center;
+      background: radial-gradient(circle at 50% 0, rgba(255,174,56,.14), transparent 58%), rgba(9,17,36,.78);
+    }
+    .cta h2 { margin-top: 0; }
+    .cta p { max-width: 620px; margin-inline: auto; }
+    .button {
+      display: inline-flex; min-height: 48px; align-items: center; justify-content: center;
+      margin-top: 10px; padding: 0 20px; border-radius: 13px;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold)); color: #251703;
+      text-decoration: none; font-weight: 730;
+    }
+
+    footer { padding: 32px 0 44px; border-top: 1px solid var(--line); color: #858c9b; font-size: 13px; }
+    .footer-row { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-links { display: flex; gap: 17px; flex-wrap: wrap; }
+    .footer-links a { color: #aeb4c0; }
+
+    @media (max-width: 620px) {
+      .wrap { width: min(100% - 28px, var(--max)); }
+      nav { min-height: 62px; }
+      .app-store { font-size: 12px; padding: 8px 11px; }
+      main { padding-top: 52px; }
+      h1 { font-size: clamp(39px, 12vw, 56px); }
+      .steps li { padding-left: 58px; }
+      .cta { padding: 30px 22px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="./" aria-label="Screening Room home">
+        <img src="app-icon-64.png" alt="" width="38" height="38">
+        <span>Screening Room</span>
+      </a>
+      <a class="app-store" href="https://apps.apple.com/us/app/screening-room/id6792022324">Download on the App Store</a>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <article>
+      <p class="breadcrumb"><a href="./">Home</a> / Private player without importing</p>
+      <p class="eyebrow">iPhone privacy guide</p>
+      <h1>Private video player without importing files</h1>
+      <p class="lead">Screening Room encrypts and plays private videos from Files, iCloud Drive, NAS, and compatible storage providers without collecting them inside a separate app-managed vault.</p>
+      <p class="meta">Published August 4, 2026 · By QianYang</p>
+
+      <div class="note">
+        <strong>What “without importing” means</strong>
+        <p>Screening Room creates an encrypted <code>.efl</code> file and saves it to a location you choose. You do not have to build a second media library inside the app. This does not mean the original file is overwritten in place or that every unencrypted copy is removed automatically.</p>
+      </div>
+
+      <h2>Why a traditional video vault may feel like a second library</h2>
+      <p>Many private-video apps begin with an import. You choose a video, copy it into an app-controlled container, and then manage that private collection separately from Files or your existing cloud and NAS folders.</p>
+      <p>That model can be useful when you want an isolated gallery, but it can also create duplicate copies, split folder organization, and make it harder to know which location contains the current version of a file.</p>
+
+      <h2>How private playback works without a vault import</h2>
+      <ol class="steps">
+        <li><strong>Choose a file from your storage.</strong> Select a video or photo from Files, iCloud Drive, NAS, or another compatible provider exposed through the iOS Files system.</li>
+        <li><strong>Encrypt it on your iPhone.</strong> Screening Room creates a protected <code>.efl</code> file locally.</li>
+        <li><strong>Save it where it belongs.</strong> Choose the folder or provider location that fits your existing organization instead of importing it into an app-managed media library.</li>
+        <li><strong>Unlock and play privately.</strong> Open the protected file through Screening Room and authenticate with Face ID or your app password.</li>
+      </ol>
+
+      <h2>Video vault vs in-place encryption</h2>
+      <p>“In-place encryption” can mean different things. In Screening Room, it describes keeping the protected file within the storage system and folder structure you choose. It does not promise a destructive overwrite of the original file's bytes.</p>
+
+      <h3>Traditional video vault</h3>
+      <ul>
+        <li>Imports media into a library controlled by the app.</li>
+        <li>Often presents a private gallery as the main way to organize files.</li>
+        <li>May require separate export steps when you want the file elsewhere.</li>
+        <li>Can be convenient when one isolated collection is exactly what you want.</li>
+      </ul>
+
+      <h3>Screening Room's storage-in-place workflow</h3>
+      <ul>
+        <li>Works with user-selected Files locations and compatible providers.</li>
+        <li>Creates a portable encrypted <code>.efl</code> file in a destination you choose.</li>
+        <li>Lets your Files, iCloud Drive, or NAS folders remain the source of organization.</li>
+        <li>Adds an authenticated private player without maintaining a second media library.</li>
+      </ul>
+
+      <h2>What stays under your control</h2>
+      <p>You decide where the protected file is saved, how it is named, whether it synchronizes through a cloud provider, and whether the unencrypted source should be kept, moved, backed up, or deleted after you verify the protected copy.</p>
+      <p>This approach is especially useful when you already have a folder system that spans <a href="protect-videos-stored-in-icloud-drive.html">iCloud Drive</a>, local Files storage, or a NAS and do not want a private-player app to replace that organization.</p>
+
+      <h2>What still changes when you protect a video</h2>
+      <p>Protecting a file produces an encrypted <code>.efl</code> file. That output occupies storage and may need to upload, download, or synchronize according to the behavior of its storage provider. Cloud or network files may also require a local download before encryption or playback.</p>
+      <p>The encrypted file can remain visible in Files with a filename, folder, size, and dates. Opening it through Screening Room helps keep an ordinary media preview from being the standard viewing entry in Files Recents, but the app cannot hide every trace of file activity or modify the Files app itself. See the <a href="keep-private-videos-out-of-files-recents.html">Files Recents privacy guide</a> for details.</p>
+
+      <h2>Privacy and recovery boundaries</h2>
+      <p>Ordinary encryption, decryption, and playback happen on your iPhone and do not automatically upload your media to developer-controlled servers. No developer-operated account is required for ordinary use.</p>
+      <p>Every <code>.efl</code> file contains developer-managed escrow recovery data as explained in the <a href="privacy-en.html">Privacy Policy</a>. Screening Room therefore does not describe the format as zero-knowledge or end-to-end encrypted. Keep your password, recovery code, protected files, and backups safe.</p>
+
+      <h2>Which approach is a better fit?</h2>
+      <p>A traditional vault may be a better fit if you want one isolated gallery to become your primary media organizer. Screening Room is a better fit when you want to keep your existing storage structure and add encryption plus private playback around selected files.</p>
+      <ul>
+        <li>You organize media in Files, iCloud Drive, NAS, or multiple providers.</li>
+        <li>You do not want to maintain a second app-specific library.</li>
+        <li>You want protected playback behind Face ID or an app password.</li>
+        <li>You prefer a one-time Pro purchase instead of a subscription.</li>
+      </ul>
+
+      <section class="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Common questions</h2>
+        <details>
+          <summary>Does Screening Room import videos into a private vault?</summary>
+          <p>No. Screening Room creates protected files in storage locations you choose and does not require an app-managed media library.</p>
+        </details>
+        <details>
+          <summary>Does in-place encryption overwrite the original video?</summary>
+          <p>Do not assume that it does. Screening Room creates an encrypted <code>.efl</code> file. Verify the protected file, then manage the original and any other unencrypted copies deliberately.</p>
+        </details>
+        <details>
+          <summary>Can protected files stay in iCloud Drive or on a NAS?</summary>
+          <p>Yes, when you select a destination available through Files or another compatible iOS file provider. Availability, downloads, and synchronization still depend on that provider and your network.</p>
+        </details>
+        <details>
+          <summary>Do I need Screening Room every time I play the protected file?</summary>
+          <p>Yes. The <code>.efl</code> file is designed to be opened through Screening Room, where you unlock private playback with Face ID or your app password.</p>
+        </details>
+        <details>
+          <summary>Does Screening Room upload my library?</summary>
+          <p>No. Ordinary file encryption, decryption, and playback do not automatically upload your media to developer-controlled servers.</p>
+        </details>
+      </section>
+
+      <section class="cta" aria-labelledby="cta-title">
+        <h2 id="cta-title">Add private playback without replacing your library</h2>
+        <p>Download Screening Room on iPhone and protect up to three files for free. A one-time Pro purchase removes the file limit, with no subscription.</p>
+        <a class="button" href="https://apps.apple.com/us/app/screening-room/id6792022324">Download on the App Store</a>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-row wrap">
+      <div>© 2026 QianYang · Screening Room / 私映</div>
+      <div class="footer-links">
+        <a href="./">Home</a>
+        <a href="keep-private-videos-out-of-files-recents.html">Files Recents guide</a>
+        <a href="protect-videos-stored-in-icloud-drive.html">iCloud Drive guide</a>
+        <a href="privacy-en.html">Privacy</a>
+        <a href="support-en.html">Support</a>
+        <a href="https://apps.apple.com/us/app/screening-room/id6792022324">App Store</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
