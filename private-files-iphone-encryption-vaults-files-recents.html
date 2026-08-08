@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Recent iOS app discussions reveal three different privacy needs: locking an app, encrypting private iPhone files, and limiting recognizable previews in Files Recents.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <meta name="theme-color" content="#050811">
+  <link rel="canonical" href="https://luckycamilleyq.github.io/screening-room-site/private-files-iphone-encryption-vaults-files-recents.html">
+  <link rel="icon" href="app-icon-64.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="app-icon-180.png" sizes="180x180">
+  <title>Private Files on iPhone: Encryption, Vaults &amp; Recents | Screening Room</title>
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Screening Room">
+  <meta property="og:title" content="Private Files on iPhone: Encryption, Vaults, and Files Recents">
+  <meta property="og:description" content="What this week's iOS privacy-app discussions reveal about local storage, encrypted files, vault imports, and visible Recents previews.">
+  <meta property="og:url" content="https://luckycamilleyq.github.io/screening-room-site/private-files-iphone-encryption-vaults-files-recents.html">
+  <meta property="og:image" content="https://luckycamilleyq.github.io/screening-room-site/app-icon-512.jpg">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="Screening Room app icon with blue theater curtains and an amber play button">
+  <meta property="article:published_time" content="2026-08-08">
+  <meta property="article:modified_time" content="2026-08-08">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Private Files on iPhone: Encryption, Vaults, and Files Recents">
+  <meta name="twitter:description" content="A weekly look at what iPhone users actually mean when they ask for private files.">
+  <meta name="twitter:image" content="https://luckycamilleyq.github.io/screening-room-site/app-icon-512.jpg">
+  <meta name="twitter:image:alt" content="Screening Room app icon with blue theater curtains and an amber play button">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Private Files on iPhone: Encryption, Vaults, and Files Recents",
+    "description": "A weekly review of iOS community discussions about app locks, vault imports, file-level encryption, iCloud protection, and Files Recents privacy.",
+    "datePublished": "2026-08-08",
+    "dateModified": "2026-08-08",
+    "mainEntityOfPage": "https://luckycamilleyq.github.io/screening-room-site/private-files-iphone-encryption-vaults-files-recents.html",
+    "image": "https://luckycamilleyq.github.io/screening-room-site/app-icon-512.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "QianYang"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "QianYang"
+    },
+    "about": [
+      "Private files on iPhone",
+      "iOS file encryption",
+      "Video vaults",
+      "Files Recents privacy",
+      "Screening Room"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #040712;
+      --bg-soft: #091124;
+      --card: rgba(255, 255, 255, 0.055);
+      --text: #f7f4ee;
+      --muted: #a9afbd;
+      --line: rgba(255, 255, 255, 0.12);
+      --gold: #df922b;
+      --gold-light: #ffc35c;
+      --max: 860px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 50% 0, rgba(18, 55, 125, .18), transparent 34rem),
+        linear-gradient(180deg, #050918 0, #040712 42rem),
+        var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--gold-light); text-underline-offset: 4px; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+    .skip-link {
+      position: fixed; top: 10px; left: 10px; z-index: 100; padding: 10px 14px;
+      border-radius: 10px; background: var(--gold-light); color: #171008;
+      transform: translateY(-160%); transition: transform .2s;
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    header {
+      position: sticky; top: 0; z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(4, 7, 18, .82);
+      backdrop-filter: blur(18px) saturate(130%);
+      -webkit-backdrop-filter: blur(18px) saturate(130%);
+    }
+    nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--text); text-decoration: none; font-weight: 720; }
+    .brand img { width: 38px; height: 38px; border-radius: 11px; }
+    .app-store { padding: 9px 14px; border: 1px solid rgba(255,195,92,.3); border-radius: 999px; text-decoration: none; font-size: 14px; font-weight: 650; }
+
+    main { padding: 76px 0 92px; }
+    .breadcrumb { margin: 0 0 28px; color: var(--muted); font-size: 14px; }
+    .breadcrumb a { color: var(--muted); }
+    .eyebrow { margin: 0 0 14px; color: var(--gold-light); font-size: 12px; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+    h1, h2, h3 { letter-spacing: -.028em; }
+    h1 { max-width: 820px; margin: 0 0 24px; font-size: clamp(42px, 7vw, 68px); line-height: 1.04; }
+    .lead { margin: 0 0 20px; color: #c9ccd4; font-size: clamp(19px, 2.4vw, 23px); line-height: 1.58; }
+    .meta { margin: 0 0 42px; color: #858c9b; font-size: 13px; }
+
+    .note {
+      margin: 34px 0 48px; padding: 22px 24px;
+      border: 1px solid rgba(255,195,92,.28); border-radius: 18px;
+      background: linear-gradient(135deg, rgba(223,146,43,.12), rgba(9,17,36,.74));
+    }
+    .note strong { color: var(--gold-light); }
+    .note p { margin: 8px 0 0; }
+
+    article h2 { margin: 54px 0 16px; font-size: clamp(30px, 4.5vw, 42px); line-height: 1.15; }
+    article h3 { margin: 30px 0 10px; font-size: 22px; }
+    article p { margin: 14px 0; color: #c5c9d2; }
+    article ul, article ol { margin: 16px 0; padding-left: 25px; color: #c5c9d2; }
+    article li + li { margin-top: 10px; }
+    article code { padding: 2px 6px; border: 1px solid var(--line); border-radius: 6px; background: rgba(255,255,255,.05); color: #f6d9a3; }
+
+    .steps { counter-reset: guide-step; display: grid; gap: 14px; margin: 24px 0; padding: 0; list-style: none; }
+    .steps li { counter-increment: guide-step; position: relative; padding: 20px 22px 20px 66px; border: 1px solid var(--line); border-radius: 17px; background: var(--card); }
+    .steps li::before {
+      content: counter(guide-step); position: absolute; left: 20px; top: 18px;
+      width: 30px; height: 30px; display: grid; place-items: center;
+      border: 1px solid rgba(255,195,92,.35); border-radius: 10px; color: var(--gold-light); font-weight: 750;
+    }
+
+    .faq { margin-top: 54px; }
+    details { border-bottom: 1px solid var(--line); }
+    summary { padding: 21px 38px 21px 0; cursor: pointer; list-style: none; font-weight: 670; }
+    summary::-webkit-details-marker { display: none; }
+    details p { margin: -2px 0 22px; }
+
+    .cta {
+      margin-top: 62px; padding: 38px 30px; border: 1px solid var(--line); border-radius: 24px; text-align: center;
+      background: radial-gradient(circle at 50% 0, rgba(255,174,56,.14), transparent 58%), rgba(9,17,36,.78);
+    }
+    .cta h2 { margin-top: 0; }
+    .cta p { max-width: 620px; margin-inline: auto; }
+    .button {
+      display: inline-flex; min-height: 48px; align-items: center; justify-content: center;
+      margin-top: 10px; padding: 0 20px; border-radius: 13px;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold)); color: #251703;
+      text-decoration: none; font-weight: 730;
+    }
+
+    footer { padding: 32px 0 44px; border-top: 1px solid var(--line); color: #858c9b; font-size: 13px; }
+    .footer-row { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-links { display: flex; gap: 17px; flex-wrap: wrap; }
+    .footer-links a { color: #aeb4c0; }
+
+    @media (max-width: 620px) {
+      .wrap { width: min(100% - 28px, var(--max)); }
+      nav { min-height: 62px; }
+      .app-store { font-size: 12px; padding: 8px 11px; }
+      main { padding-top: 52px; }
+      h1 { font-size: clamp(39px, 12vw, 56px); }
+      .steps li { padding-left: 58px; }
+      .cta { padding: 30px 22px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="./" aria-label="Screening Room home">
+        <img src="app-icon-64.png" alt="" width="38" height="38">
+        <span>Screening Room</span>
+      </a>
+      <a class="app-store" href="https://apps.apple.com/us/app/screening-room/id6792022324">Download on the App Store</a>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <article>
+      <p class="breadcrumb"><a href="./">Home</a> / Weekly iPhone privacy note</p>
+      <p class="eyebrow">Weekly privacy note · August 8, 2026</p>
+      <h1>Private files on iPhone: encryption, vaults, and Files Recents</h1>
+      <p class="lead">Recent iOS app discussions show that “private files” can mean three different things: keeping people out of an app, encrypting the file itself, and avoiding recognizable filenames or previews in places like Files Recents.</p>
+      <p class="meta">Published August 8, 2026 · By QianYang</p>
+
+      <div class="note">
+        <strong>The privacy layers are related, but not interchangeable</strong>
+        <p>An app lock controls entry to an app. Cloud-account protection controls access to synchronized data. File-level encryption changes the contents of a selected file. None of these automatically removes existing Recents entries, hides every filename, or deletes every unencrypted copy.</p>
+      </div>
+
+      <h2>What this week's iOS privacy discussions reveal</h2>
+      <p>Two new r/iOSApps discussions this week introduced privacy tools as dedicated local or encrypted vaults: move private material away from Photos, Files, or Notes, then manage it inside one protected app. That is a familiar and valid design, but it also confirms how strongly the iOS privacy category still equates privacy with importing files into a second library.</p>
+      <p>At the same time, an active r/iPhone thread received a new question this week asking why images saved in Files appear in Recents and how to turn that behavior off. A separate long-running r/iOS discussion continues to attract users looking for a way to clear or disable Recents without deleting the underlying files.</p>
+      <p>The shared concern is not simply “How do I hide a video?” It is: <em>Can I keep my existing folders, add meaningful protection, and avoid turning normal file access into a privacy surprise?</em></p>
+
+      <h2>Local, locked, and encrypted are not the same</h2>
+      <h3>Local describes location</h3>
+      <p>A file stored only on an iPhone is local, but that word alone does not explain whether the file is encrypted by the app, whether an ordinary media preview can be generated, or what happens when the file is exported or backed up.</p>
+
+      <h3>Locked describes an access gate</h3>
+      <p>Face ID or a passcode can stop someone from casually opening an app. That is useful protection against shoulder surfing, but it does not define the format of every file accessible through Files, iCloud Drive, a NAS, or another provider.</p>
+
+      <h3>File-level encryption travels with the protected file</h3>
+      <p>With file-level encryption, the selected media is represented as encrypted data rather than an ordinary playable video. The filename, folder, size, dates, provider activity, and the existence of the encrypted file may still remain visible.</p>
+
+      <h2>Why Files Recents keeps becoming a privacy question</h2>
+      <p>Apple describes Recents as the place to view files opened recently. That is convenient when you are finding a work document, but the same convenience can feel exposed when a private image or video has a recognizable name or thumbnail.</p>
+      <p>Community workarounds include locking the Files app, temporarily disabling a Files location, renaming files, or compressing and deleting the ordinary copy. These approaches have different tradeoffs, and community reports are not guarantees of how every iOS version or provider will behave.</p>
+      <p>Screening Room does not claim to clear existing Recents entries, disable Recents, or change Apple's Files app. Opening protected media through Screening Room helps keep an ordinary media preview from being the standard viewing entry, while the encrypted file itself can still appear according to normal Files behavior. Read the detailed <a href="keep-private-videos-out-of-files-recents.html">Files Recents privacy guide</a>.</p>
+
+      <h2>Cloud encryption and file encryption solve different problems</h2>
+      <p>Apple says iCloud Drive data is encrypted in transit and on Apple's servers under standard protection. With Advanced Data Protection enabled, iCloud Drive is end-to-end encrypted and the keys are held by trusted devices.</p>
+      <p>Apple also notes that some iCloud Drive metadata—including the filename, file size, and created, modified, or last-opened times—remains under standard data protection even when Advanced Data Protection is enabled. That is another reason not to treat cloud-account security, metadata privacy, and a separately encrypted media file as the same layer.</p>
+      <p>Advanced Data Protection can meaningfully strengthen an iCloud account, but it also makes the user responsible for recovery. File-level protection can be added to selected media independently of that account setting. See <a href="protect-videos-stored-in-icloud-drive.html">how Screening Room protects videos stored in iCloud Drive</a>.</p>
+
+      <h2>Vault import or storage-in-place workflow?</h2>
+      <p>A traditional vault is a strong fit when you want one isolated gallery to become the main home for private material. You import files, then use the vault's own organization, preview, and sharing tools.</p>
+      <p>A storage-in-place workflow is a better fit when your folders in Files, iCloud Drive, NAS, or compatible providers are already the organization you want to keep. Screening Room creates a protected <code>.efl</code> file in a location you choose and provides authenticated private playback without requiring a second app-managed media library.</p>
+      <p>“Storage-in-place” does not mean the app destructively overwrites the source video. Verify the protected file, then manage every original or exported copy deliberately. Read the full <a href="private-video-player-without-importing-files.html">video vault vs storage-in-place encryption comparison</a>.</p>
+
+      <h2>Where Screening Room fits</h2>
+      <p>Screening Room is primarily a private media player for iPhone, not a general-purpose document vault. It is designed for people who want encryption and private playback around selected videos and photos while keeping control of their storage locations.</p>
+      <ul>
+        <li>Select media from Files, iCloud Drive, NAS, or compatible iOS file providers.</li>
+        <li>Create an encrypted <code>.efl</code> file on the iPhone.</li>
+        <li>Choose where the protected output is saved.</li>
+        <li>Unlock playback with Face ID or an app password.</li>
+        <li>Use the app without a developer-operated account.</li>
+        <li>Try up to three protected files free; Pro is a one-time purchase.</li>
+      </ul>
+      <p>Ordinary encryption, decryption, and playback do not automatically upload media to developer-controlled servers. Every <code>.efl</code> file contains developer-managed escrow recovery data as explained in the <a href="privacy-en.html">Privacy Policy</a>, so Screening Room does not describe the format as zero-knowledge or end-to-end encrypted.</p>
+
+      <h2>A practical private-file checklist for this week</h2>
+      <ol class="steps">
+        <li><strong>Map every ordinary copy.</strong> Check Photos, Files, downloads, shared folders, exports, backups, and provider caches before assuming one protected copy solved the whole problem.</li>
+        <li><strong>Protect the accounts and device.</strong> Use a strong device passcode, two-factor authentication, and Apple recovery options appropriate to your iCloud configuration.</li>
+        <li><strong>Choose the right storage model.</strong> Decide whether you want an imported vault library or protected files that remain in your existing folders.</li>
+        <li><strong>Use neutral metadata.</strong> A protected file can still expose its filename, folder, size, and dates to people or systems that can browse the storage location.</li>
+        <li><strong>Verify before cleanup.</strong> Open the encrypted file successfully and confirm your backup before deleting or moving an unencrypted source.</li>
+        <li><strong>Protect recovery material.</strong> Keep passwords and recovery codes separate from the protected files, with at least one safe offline copy.</li>
+      </ol>
+
+      <section class="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Common questions</h2>
+        <details>
+          <summary>Does locking the Files app encrypt every file inside it?</summary>
+          <p>No. An app lock controls access to the app interface. It is not the same as converting each selected file into a separately encrypted format.</p>
+        </details>
+        <details>
+          <summary>Does Advanced Data Protection stop filenames from appearing in Files Recents?</summary>
+          <p>No such promise should be assumed. Advanced Data Protection strengthens iCloud encryption, while Files Recents and visible metadata are separate behaviors.</p>
+        </details>
+        <details>
+          <summary>Can Screening Room remove an old private-video entry from Recents?</summary>
+          <p>No. Screening Room cannot clear existing Recents entries or alter the Files app's Recents feature.</p>
+        </details>
+        <details>
+          <summary>Do I have to import my private videos into a new vault?</summary>
+          <p>No. Screening Room can create protected files in storage locations you choose without maintaining a second app-managed media library.</p>
+        </details>
+      </section>
+
+      <h2>Community context and official references</h2>
+      <p>The community posts below are useful signals about user needs and product positioning, not independent security audits. Security and privacy claims in developer posts belong to their authors.</p>
+      <ul>
+        <li><a href="https://www.reddit.com/r/iosapps/comments/1vgrvba/filebox_local_file_manager/" rel="nofollow noopener">r/iOSApps: private local file manager and media-vault discussion</a> · August 6, 2026</li>
+        <li><a href="https://www.reddit.com/r/iosapps/comments/1vf7akc/infinity_vaults_encrypted_vault_for_photos_files/" rel="nofollow noopener">r/iOSApps: encrypted all-in-one vault discussion</a> · August 4, 2026</li>
+        <li><a href="https://www.reddit.com/r/iphone/comments/1l71kkl/how_to_hide_photos_in_iphone_not_in_photos_app/" rel="nofollow noopener">r/iPhone: hiding photos outside Photos, including a new Files Recents question</a></li>
+        <li><a href="https://www.reddit.com/r/ios/comments/1iovugv/clear_recent_items_list_in_files_app/" rel="nofollow noopener">r/iOS: ongoing discussion about clearing or hiding Files Recents</a></li>
+        <li><a href="https://support.apple.com/guide/iphone/files-basics-iphe9d46e90f/ios">Apple: Files basics on iPhone</a></li>
+        <li><a href="https://support.apple.com/en-us/102651">Apple: iCloud data security overview</a></li>
+        <li><a href="https://support.apple.com/en-mide/102238">Apple: third-party cloud apps in Files</a></li>
+      </ul>
+
+      <section class="cta" aria-labelledby="cta-title">
+        <h2 id="cta-title">Keep your storage. Add private playback.</h2>
+        <p>Download Screening Room on iPhone and protect up to three files for free. A one-time Pro purchase removes the file limit, with no subscription.</p>
+        <a class="button" href="https://apps.apple.com/us/app/screening-room/id6792022324">Download on the App Store</a>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-row wrap">
+      <div>© 2026 QianYang · Screening Room / 私映</div>
+      <div class="footer-links">
+        <a href="./">Home</a>
+        <a href="keep-private-videos-out-of-files-recents.html">Files Recents guide</a>
+        <a href="protect-videos-stored-in-icloud-drive.html">iCloud Drive guide</a>
+        <a href="private-video-player-without-importing-files.html">No-import guide</a>
+        <a href="play-protected-nas-videos-on-iphone.html">NAS guide</a>
+        <a href="privacy-en.html">Privacy</a>
+        <a href="support-en.html">Support</a>
+        <a href="https://apps.apple.com/us/app/screening-room/id6792022324">App Store</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

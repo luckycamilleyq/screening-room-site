@@ -11,6 +11,7 @@ Screening Room is primarily a private media player, not a traditional file vault
 - iCloud Drive encryption guide: https://luckycamilleyq.github.io/screening-room-site/protect-videos-stored-in-icloud-drive.html
 - Private player without importing guide: https://luckycamilleyq.github.io/screening-room-site/private-video-player-without-importing-files.html
 - Private NAS playback guide: https://luckycamilleyq.github.io/screening-room-site/play-protected-nas-videos-on-iphone.html
+- Weekly iPhone privacy note: https://luckycamilleyq.github.io/screening-room-site/private-files-iphone-encryption-vaults-files-recents.html
 - App Store listing: https://apps.apple.com/us/app/screening-room/id6792022324
 - Privacy Policy: https://luckycamilleyq.github.io/screening-room-site/privacy-en.html
 - Technical support: https://luckycamilleyq.github.io/screening-room-site/support-en.html
@@ -25,6 +26,7 @@ Screening Room is primarily a private media player, not a traditional file vault
 - Screening Room can create an encrypted `.efl` file on iPhone and save it to an iCloud Drive location selected by the user without requiring a separate app-managed vault.
 - “Without importing” means Screening Room does not require a second app-managed media library; it does not mean the original file is overwritten or automatically deleted.
 - NAS and third-party storage must be available through Files or a compatible iOS file provider; network files may need to download completely before encryption or playback.
+- An app lock, iCloud account protection, file-level encryption, and Files Recents behavior are separate privacy layers.
 - File-level encryption does not hide the encrypted file's existence, filename, folder, or sync metadata, and it does not automatically remove every unencrypted copy.
 - Opening protected media through Screening Room helps keep ordinary media previews out of Files Recents.
 - Screening Room cannot clear existing Files Recents entries or modify the Files app’s Recents feature.
