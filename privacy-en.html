@@ -12,7 +12,7 @@ a{color:var(--link);text-decoration:none}.language-link{display:inline-flex;alig
 @media(max-width:640px){main{width:min(100% - 20px,900px);padding:18px 0 44px}.card{padding:26px 20px;border-radius:18px}.choice{grid-template-columns:1fr}.topbar{flex-wrap:wrap}}
 </style></head><body><main><div class="topbar"><a class="language-link" href="./">Screening Room home</a><a class="language-link" href="privacy-zh.html" lang="zh-CN">中文</a></div><article class="card">
 <h1>Screening Room Privacy Policy</h1>
-<p class="meta">Effective Date: July 20, 2026</p>
+<p class="meta">Effective Date: August 27, 2026</p>
 <div class="summary"><strong>Privacy Summary:</strong> Screening Room is designed around on-device processing. During ordinary use, the App does not automatically upload user files to developer-controlled servers. Every <code>.efl</code> encrypted file created by the App contains developer-managed escrow recovery data. A party possessing the corresponding developer private key may, after obtaining the file, have the technical ability to recover the file encryption key and decrypt the file content.</div>
 
 <h2>1. Scope</h2>
@@ -87,21 +87,55 @@ a{color:var(--link);text-decoration:none}.language-link{display:inline-flex;alig
 <h2>10. Third-Party Services</h2>
 <p>The App may use system services provided by Apple, including Files, document pickers, iCloud Drive, Face ID, Touch ID, device passcode authentication, StoreKit, system media playback, and file-access frameworks.</p>
 <p>Users may also choose files managed by third-party cloud drives, NAS devices, or file providers. Those third parties process data under their own privacy policies and terms. The developer does not control their data-processing practices.</p>
+<p>If a user connects a Microsoft OneDrive or Google Drive account, the App communicates directly with Microsoft or Google using the authorization granted by the user. See Section 11. Microsoft and Google process the data they receive under their own privacy policies and terms.</p>
 
-<h2>11. Children’s Privacy</h2>
+<h2>11. Cloud Drive Accounts (OneDrive and Google Drive)</h2>
+<h3>11.1 Connecting an Account</h3>
+<p>Connecting a cloud drive account is optional. A user may connect a Microsoft OneDrive account, a Google Drive account, or both, in order to browse and play media stored in that account. If no account is connected, the features described in this Section are not used.</p>
+<p>Accounts are connected through the provider&rsquo;s own OAuth 2.0 authorization page (with PKCE), presented in the system browser. The App never sees or stores the user&rsquo;s cloud account password. The resulting access and refresh tokens are stored only in the device Keychain, protected so that they are available only while the device is unlocked and are never copied to another device. Tokens are never transmitted to developer-controlled servers.</p>
+
+<h3>11.2 What the App Accesses, and Why</h3>
+<p>With the authorization granted by the user, the App accesses only what is required to provide its user-facing features:</p>
+<ul>
+<li>the identifier and email address of the connected account, displayed in the App so that the user can distinguish accounts and so that the same account is not connected twice;</li>
+<li>the names, folder structure, sizes, modification times, and thumbnails of items inside the folders the user has added to the App, so that the App can list the media contained in those folders;</li>
+<li>file content, read by byte range, in order to stream playback directly from the cloud drive (including range reads of the App&rsquo;s <code>.efl</code> encrypted files);</li>
+<li>uploads, when the user chooses to save a file back into the user&rsquo;s own cloud drive; files encrypted by the App are encrypted on the device before upload;</li>
+<li>moving a file to the cloud drive&rsquo;s trash, when the user deletes that file from within the App;</li>
+<li>storage quota information, displayed in the App.</li>
+</ul>
+<p>The App requests folder-level access because its core feature is adding a cloud folder and automatically listing the media inside it, including files the user adds to that folder later.</p>
+<p>All of these requests are made directly between the user&rsquo;s device and Microsoft or Google. No developer-operated server participates in, proxies, or receives this traffic. The App does not write tokens, email addresses, filenames, or request URLs into logs.</p>
+
+<h3>11.3 Google API Services User Data Policy (Limited Use)</h3>
+<p>Screening Room&rsquo;s use and transfer of information received from Google APIs to any other app will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+<p>In particular, data obtained through the Google Drive API is:</p>
+<ul>
+<li>used only to provide and improve the user-facing features described in Section 11.2;</li>
+<li>processed only on the user&rsquo;s device, and never transmitted to, stored on, or processed by developer-controlled servers;</li>
+<li>never sold, and never used for advertising, marketing, profiling, or for training generalized artificial-intelligence or machine-learning models;</li>
+<li>never transferred to third parties, except when the user explicitly directs it or where required by law;</li>
+<li>never read by a human, except where the user explicitly submits the data to us for support of a specific issue, where required for security purposes such as investigating abuse, or where required by law.</li>
+</ul>
+
+<h3>11.4 Disconnecting an Account and Deletion</h3>
+<p>A user may disconnect a cloud drive account at any time in the App&rsquo;s settings. Disconnecting removes the stored tokens from the device Keychain and deletes the App&rsquo;s local record of that account, including cached folder listings, thumbnails, and downloaded copies. Deleting the App removes the same data.</p>
+<p>Disconnecting does not delete anything stored in the user&rsquo;s cloud drive. Users may additionally review or revoke the App&rsquo;s access at any time in their provider account settings, for example at <a href="https://myaccount.google.com/permissions" rel="noopener">Google Account &rarr; Third-party apps &amp; services</a>, or in the equivalent Microsoft account page.</p>
+
+<h2>12. Children’s Privacy</h2>
 <p>The App is not specifically directed to children. We do not knowingly collect children’s personal information through the App. A parent or guardian who believes that a child submitted personal information or files to us may request deletion using the contact information below.</p>
 
-<h2>12. Data Security</h2>
+<h2>13. Data Security</h2>
 <p>We use technical and organizational measures appropriate to the App’s functionality and escrow recovery capability and rely on security capabilities provided by iOS where reasonably practical.</p>
 <p>However, no electronic storage, encryption, key-escrow, or data-processing method can guarantee absolute security. Users should protect their device passcode, App password, recovery code, encrypted files, important file backups, and accounts used with iCloud, cloud drives, or other storage services.</p>
 
-<h2>13. Your Rights</h2>
+<h2>14. Your Rights</h2>
 <p>Subject to applicable law, users may request access to, correction of, or deletion of personal information and recovery data they voluntarily submitted to us.</p>
 <p>Because the App’s primary files and data are stored on the user’s device or in storage services selected by the user, the developer generally cannot access or delete content stored in those locations. Unless the user voluntarily provides the relevant <code>.efl</code> file or necessary data, the developer cannot remotely recover or access the file.</p>
 
-<h2>14. Changes to This Policy</h2>
+<h2>15. Changes to This Policy</h2>
 <p>We may update this Privacy Policy when the App’s features, file format, escrow recovery mechanism, data-processing practices, legal requirements, platform rules, security requirements, or operating practices change. The updated version will be posted on this page with a revised effective date. Where reasonably practicable, material changes will also be communicated through an in-app notice or another appropriate method.</p>
 
-<h2>15. Contact Us</h2>
+<h2>16. Contact Us</h2>
 <div class="contact"><p><strong>Developer:</strong> QianYang</p><p><strong>Support Email:</strong> <a href="mailto:yqdevsupport@gmail.com">yqdevsupport@gmail.com</a></p></div>
 </article><footer><a href="./">Screening Room home</a> · Screening Room / 私映 · QianYang</footer></main></body></html>

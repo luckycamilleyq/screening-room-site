@@ -12,7 +12,7 @@ a{color:var(--link);text-decoration:none}.language-link{display:inline-flex;alig
 @media(max-width:640px){main{width:min(100% - 20px,900px);padding:18px 0 44px}.card{padding:26px 20px;border-radius:18px}.choice{grid-template-columns:1fr}.topbar{flex-wrap:wrap}}
 </style></head><body><main><div class="topbar"><a class="language-link" href="./">返回私映官网</a><a class="language-link" href="privacy-en.html" lang="en">English</a></div><article class="card">
 <h1>私映（Screening Room）隐私政策</h1>
-<p class="meta">生效日期：2026 年 7 月 20 日</p>
+<p class="meta">生效日期：2026 年 8 月 27 日</p>
 <div class="summary"><strong>隐私概要：</strong>私映以设备本地处理为核心。正常使用过程中，本应用不会自动将用户文件上传至开发者服务器。由本应用创建的每个 <code>.efl</code> 加密文件均包含开发者托管恢复数据；持有对应开发者私钥的一方在取得该文件后，可能具备恢复文件密钥并解密文件内容的技术能力。</div>
 
 <h2>1. 适用范围</h2>
@@ -87,21 +87,55 @@ a{color:var(--link);text-decoration:none}.language-link{display:inline-flex;alig
 <h2>10. 第三方服务</h2>
 <p>本应用可能调用 Apple 提供的系统能力，包括 Files、文档选择器、iCloud Drive、Face ID、Touch ID、设备密码验证、StoreKit、系统媒体播放及文件访问框架。</p>
 <p>用户也可能主动选择由第三方网盘、NAS 或文件提供商管理的文件。第三方服务按照其自身的隐私政策和服务条款处理数据，开发者无法控制其数据处理行为。</p>
+<p>若用户连接了 Microsoft OneDrive 或 Google Drive 账户，本应用会依据用户授予的授权直接与 Microsoft 或 Google 通信，详见第 11 节。Microsoft 与 Google 按其自身的隐私政策与条款处理其接收到的数据。</p>
 
-<h2>11. 儿童隐私</h2>
+<h2>11. 云盘账户（OneDrive 与 Google Drive）</h2>
+<h3>11.1 账户的连接方式</h3>
+<p>连接云盘账户是可选功能。用户可以连接 Microsoft OneDrive 账户、Google Drive 账户或两者，以便浏览和播放存放在该账户中的媒体文件。若用户未连接任何账户，本节所述功能不会被使用。</p>
+<p>账户通过服务商自己的 OAuth 2.0 授权页面（采用 PKCE）在系统浏览器中连接，本应用不会看到也不会保存用户的云盘账户密码。由此获得的访问令牌与刷新令牌仅保存在本机钥匙串（Keychain）中，并被限定为「仅本设备、解锁后可用」，不会同步到其他设备，也不会传输至开发者控制的服务器。</p>
+
+<h3>11.2 本应用访问哪些数据、用于什么</h3>
+<p>在用户授权范围内，本应用仅访问实现相应功能所必需的数据：</p>
+<ul>
+<li>已连接账户的标识与邮箱地址，用于在应用内展示、区分不同账户，并避免重复连接同一账户；</li>
+<li>用户添加到应用中的文件夹内条目的名称、目录结构、大小、修改时间与缩略图，用于列出这些文件夹中的媒体文件；</li>
+<li>文件内容（按字节区间读取），用于直接从云盘串流播放，包括对本应用 <code>.efl</code> 加密文件的区间读取；</li>
+<li>上传：当用户选择把文件保存回其自己的云盘时；由本应用加密的文件在上传前已在设备上完成加密；</li>
+<li>当用户在应用内删除某个云盘文件时，将该文件移入云盘的回收站；</li>
+<li>存储配额信息，用于在应用内展示。</li>
+</ul>
+<p>本应用之所以申请文件夹级别的访问权限，是因为其核心功能是「添加一个云端文件夹并自动列出其中的媒体文件」，其中也包括用户之后才放入该文件夹的文件。</p>
+<p>上述请求均在用户设备与 Microsoft 或 Google 之间直接发生，没有任何开发者运营的服务器参与、代理或接收这些流量。本应用不会将令牌、邮箱地址、文件名或请求 URL 写入日志。</p>
+
+<h3>11.3 Google API 服务用户数据政策（Limited Use 有限使用声明）</h3>
+<p>Screening Room（私映）对从 Google API 获得的信息的使用和向任何其他应用的传输，均遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>，包括其中的 Limited Use（有限使用）要求。</p>
+<p>具体而言，通过 Google Drive API 获得的数据：</p>
+<ul>
+<li>仅用于提供和改进第 11.2 节所述的、面向用户的功能；</li>
+<li>仅在用户设备本机处理，不会传输至、存储于或由开发者控制的服务器处理；</li>
+<li>绝不出售，也绝不用于广告、营销、用户画像，或用于训练通用人工智能／机器学习模型；</li>
+<li>不会转移给第三方，除非用户明确指示或法律要求；</li>
+<li>不会由人工读取，除非用户为解决特定问题主动提交给我们、出于调查滥用等安全目的必需，或法律要求。</li>
+</ul>
+
+<h3>11.4 断开账户与数据删除</h3>
+<p>用户可随时在应用设置中断开已连接的云盘账户。断开后，本应用会从本机钥匙串中删除所保存的令牌，并删除该账户在本机的记录，包括缓存的目录列表、缩略图与已下载的副本。删除应用同样会清除这些数据。</p>
+<p>断开账户不会删除用户云盘中的任何内容。用户也可随时在服务商的账户设置中查看或撤销本应用的访问权限，例如在 <a href="https://myaccount.google.com/permissions" rel="noopener">Google 账号 &rarr; 第三方应用与服务</a>，或 Microsoft 账户的相应页面。</p>
+
+<h2>12. 儿童隐私</h2>
 <p>本应用并非专门面向儿童设计。我们不会故意通过本应用收集儿童个人信息。如果父母或监护人认为儿童向我们提交了个人信息或文件，可以通过本政策提供的联系方式请求删除。</p>
 
-<h2>12. 数据安全</h2>
+<h2>13. 数据安全</h2>
 <p>我们采用与本应用功能和托管恢复能力相适应的技术和组织措施，并在合理可行的范围内使用 iOS 提供的安全能力保护数据。</p>
 <p>但是，任何电子存储、加密、密钥托管或数据处理方式都无法保证绝对安全。用户应妥善保护设备密码、应用密码、恢复码、加密文件和重要文件备份，并保护其 iCloud、网盘或其他存储服务账户。</p>
 
-<h2>13. 用户权利</h2>
+<h2>14. 用户权利</h2>
 <p>在适用法律规定的范围内，用户可以就其主动提交给我们的个人信息和恢复数据请求访问、更正或删除。</p>
 <p>由于本应用的主要文件和数据保存在用户设备或用户自行选择的存储服务中，开发者通常无法访问或删除这些位置中的内容。除非用户主动向开发者提交相关 <code>.efl</code> 文件或必要数据，否则开发者无法远程恢复或访问这些文件。</p>
 
-<h2>14. 本政策的变更</h2>
+<h2>15. 本政策的变更</h2>
 <p>我们可能因应用功能、文件格式、托管恢复机制、数据处理方式、法律法规、平台规则或安全运营要求的变化更新本隐私政策。更新后的版本会发布在本页面，并注明新的生效日期。对于重大变更，我们会在合理可行的情况下通过应用内提示或其他适当方式告知用户。</p>
 
-<h2>15. 联系我们</h2>
+<h2>16. 联系我们</h2>
 <div class="contact"><p><strong>开发者：</strong>QianYang</p><p><strong>支持邮箱：</strong><a href="mailto:yqdevsupport@gmail.com">yqdevsupport@gmail.com</a></p></div>
 </article><footer><a href="./">返回私映官网</a> · Screening Room / 私映 · QianYang</footer></main></body></html>
