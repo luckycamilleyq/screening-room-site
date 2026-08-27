@@ -89,7 +89,7 @@ a{color:var(--link);text-decoration:none}.language-link{display:inline-flex;alig
 <p>Users may also choose files managed by third-party cloud drives, NAS devices, or file providers. Those third parties process data under their own privacy policies and terms. The developer does not control their data-processing practices.</p>
 <p>If a user connects a Microsoft OneDrive or Google Drive account, the App communicates directly with Microsoft or Google using the authorization granted by the user. See Section 11. Microsoft and Google process the data they receive under their own privacy policies and terms.</p>
 
-<h2>11. Cloud Drive Accounts (OneDrive and Google Drive)</h2>
+<h2 id="cloud-drives">11. Cloud Drive Accounts (OneDrive and Google Drive)</h2>
 <h3>11.1 Connecting an Account</h3>
 <p>Connecting a cloud drive account is optional. A user may connect a Microsoft OneDrive account, a Google Drive account, or both, in order to browse and play media stored in that account. If no account is connected, the features described in this Section are not used.</p>
 <p>Accounts are connected through the provider&rsquo;s own OAuth 2.0 authorization page (with PKCE), presented in the system browser. The App never sees or stores the user&rsquo;s cloud account password. The resulting access and refresh tokens are stored only in the device Keychain, protected so that they are available only while the device is unlocked and are never copied to another device. Tokens are never transmitted to developer-controlled servers.</p>

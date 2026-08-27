@@ -89,7 +89,7 @@ a{color:var(--link);text-decoration:none}.language-link{display:inline-flex;alig
 <p>用户也可能主动选择由第三方网盘、NAS 或文件提供商管理的文件。第三方服务按照其自身的隐私政策和服务条款处理数据，开发者无法控制其数据处理行为。</p>
 <p>若用户连接了 Microsoft OneDrive 或 Google Drive 账户，本应用会依据用户授予的授权直接与 Microsoft 或 Google 通信，详见第 11 节。Microsoft 与 Google 按其自身的隐私政策与条款处理其接收到的数据。</p>
 
-<h2>11. 云盘账户（OneDrive 与 Google Drive）</h2>
+<h2 id="cloud-drives">11. 云盘账户（OneDrive 与 Google Drive）</h2>
 <h3>11.1 账户的连接方式</h3>
 <p>连接云盘账户是可选功能。用户可以连接 Microsoft OneDrive 账户、Google Drive 账户或两者，以便浏览和播放存放在该账户中的媒体文件。若用户未连接任何账户，本节所述功能不会被使用。</p>
 <p>账户通过服务商自己的 OAuth 2.0 授权页面（采用 PKCE）在系统浏览器中连接，本应用不会看到也不会保存用户的云盘账户密码。由此获得的访问令牌与刷新令牌仅保存在本机钥匙串（Keychain）中，并被限定为「仅本设备、解锁后可用」，不会同步到其他设备，也不会传输至开发者控制的服务器。</p>

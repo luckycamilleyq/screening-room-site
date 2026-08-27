@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="Screening Room encrypts and plays private videos on iPhone from Files, iCloud Drive, NAS, and compatible providers—without a separate vault.">
+  <meta name="description" content="Screening Room encrypts and plays private videos on iPhone from Files, iCloud Drive, NAS, OneDrive, and Google Drive—without a separate vault.">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="theme-color" content="#050811">
   <link rel="canonical" href="https://luckycamilleyq.github.io/screening-room-site/">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Screening Room">
   <meta property="og:title" content="Screening Room — Private Media Player for iPhone">
-  <meta property="og:description" content="Encrypt and play private videos where they already live—in Files, iCloud Drive, NAS, and compatible storage providers.">
+  <meta property="og:description" content="Encrypt and play private videos where they already live—in Files, iCloud Drive, NAS, OneDrive, and Google Drive.">
   <meta property="og:url" content="https://luckycamilleyq.github.io/screening-room-site/">
   <meta property="og:image" content="https://luckycamilleyq.github.io/screening-room-site/app-icon-512.jpg">
   <meta property="og:image:width" content="512">
@@ -23,7 +23,7 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Screening Room — Private Media Player for iPhone">
-  <meta name="twitter:description" content="Encrypt and play private videos from Files, iCloud Drive, NAS, and compatible storage providers without a separate vault.">
+  <meta name="twitter:description" content="Encrypt and play private videos from Files, iCloud Drive, NAS, OneDrive, and Google Drive without a separate vault.">
   <meta name="twitter:image" content="https://luckycamilleyq.github.io/screening-room-site/app-icon-512.jpg">
   <meta name="twitter:image:alt" content="Screening Room app icon with blue theater curtains and an amber play button">
 
@@ -36,7 +36,7 @@
       "Screening Room — Private Media Player",
       "私映"
     ],
-    "description": "A private media player for iPhone that encrypts and plays videos directly from Files, iCloud Drive, NAS, and compatible storage providers without importing them into a separate vault.",
+    "description": "A private media player for iPhone that encrypts and plays videos directly from Files, iCloud Drive, NAS, and connected OneDrive or Google Drive accounts, without importing them into a separate vault.",
     "applicationCategory": "MultimediaApplication",
     "operatingSystem": "iOS",
     "availableOnDevice": "iPhone",
@@ -323,7 +323,7 @@
     .fact p { margin: 0; color: #d3cec6; font-size: 14px; }
     .privacy-link { display: inline-block; margin-top: 18px; color: var(--gold-light); text-underline-offset: 4px; }
 
-    .use-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .use-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(238px, 1fr)); gap: 16px; }
     .use-card { padding: 28px; border-top: 1px solid rgba(212,154,67,.55); background: linear-gradient(180deg, rgba(212,154,67,.07), transparent 72%); }
     .use-card h3 { margin-bottom: 8px; font-size: 20px; }
     .use-card p { margin: 0; color: var(--muted); font-size: 14px; }
@@ -409,6 +409,7 @@
       </a>
       <div class="nav-links">
         <a href="#why">Why it’s different</a>
+        <a href="#cloud">Cloud drives</a>
         <a href="#privacy">Privacy</a>
         <a href="#faq">FAQ</a>
         <a class="language" href="privacy-zh.html" lang="zh-CN">中文隐私政策</a>
@@ -422,7 +423,7 @@
         <div class="hero-content">
           <div class="eyebrow">Private media player for iPhone</div>
           <h1>Screening Room <span>Your files. Their place. Your privacy.</span></h1>
-          <p class="hero-copy">Encrypt and play private videos directly from Files, iCloud Drive, NAS, and compatible storage providers—without importing them into a separate vault.</p>
+          <p class="hero-copy">Encrypt and play private videos directly from Files, iCloud Drive, NAS, and your own OneDrive or Google Drive account—without importing them into a separate vault.</p>
           <div class="actions">
             <a class="button primary" href="https://apps.apple.com/us/app/screening-room/id6792022324" aria-label="Download Screening Room on the App Store">
               Download on the App Store
@@ -525,6 +526,25 @@
           <article class="use-card"><h3>iCloud Drive</h3><p>Protect personal videos while keeping them inside the folders and sync workflow you already use. <a href="protect-videos-stored-in-icloud-drive.html">Read the iCloud Drive encryption guide.</a></p></article>
           <article class="use-card"><h3>NAS &amp; network storage</h3><p>Play supported encrypted media selected through compatible iOS file providers without building a separate on-device vault. <a href="play-protected-nas-videos-on-iphone.html">Read the private NAS playback guide.</a></p></article>
           <article class="use-card"><h3>Local Files</h3><p>Keep private media on your iPhone, unlock it with Face ID, and help keep ordinary media previews out of Files Recents.</p></article>
+          <article class="use-card"><h3>OneDrive &amp; Google Drive</h3><p>Connect your own cloud account, add the folders you care about, and stream their videos on your iPhone. <a href="#cloud">See how cloud drives work.</a></p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cloud" aria-labelledby="cloud-title">
+      <div class="wrap">
+        <div class="privacy-panel">
+          <div>
+            <p class="eyebrow">Cloud drives</p>
+            <h2 id="cloud-title">Watch what is already in your OneDrive or Google Drive.</h2>
+            <p class="intro">Connect your own Microsoft OneDrive or Google Drive account, add the folders you want to watch, and Screening Room lists the videos inside them and streams playback straight from the drive—no full download first, and no copy to import. Files you choose to protect are encrypted on your iPhone before they are saved back to your own drive.</p>
+            <a class="privacy-link" href="privacy-en.html#cloud-drives">How cloud drive data is handled →</a>
+          </div>
+          <div class="facts">
+            <div class="fact"><span class="check" aria-hidden="true">✓</span><p>You sign in on Google’s or Microsoft’s own page. The app never sees your cloud password.</p></div>
+            <div class="fact"><span class="check" aria-hidden="true">✓</span><p>Your iPhone talks to the drive directly. There is no developer-operated server in between.</p></div>
+            <div class="fact"><span class="check" aria-hidden="true">✓</span><p>Disconnect any time: the app removes the stored tokens and its local cache from the device.</p></div>
+          </div>
         </div>
       </div>
     </section>
@@ -561,6 +581,10 @@
           <details>
             <summary>Can I use it with iCloud Drive or a NAS?</summary>
             <p>Yes. Screening Room works with user-selected locations exposed through the iOS Files system, including iCloud Drive, NAS connections, and compatible third-party file providers. <a href="protect-videos-stored-in-icloud-drive.html">Learn how to protect videos stored in iCloud Drive</a>, or <a href="play-protected-nas-videos-on-iphone.html">read the private NAS playback guide.</a></p>
+          </details>
+          <details>
+            <summary>Can I play videos stored in OneDrive or Google Drive?</summary>
+            <p>Yes. You can connect your own Microsoft OneDrive or Google Drive account, add folders from it, and Screening Room lists the videos in those folders and streams them directly from the drive. Authorization happens on your device, and Screening Room’s use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. <a href="privacy-en.html#cloud-drives">See Section 11 of the privacy policy.</a></p>
           </details>
           <details>
             <summary>Will videos appear in Files Recents after I watch them?</summary>
