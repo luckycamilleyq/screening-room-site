@@ -1,11 +1,12 @@
-# Screening Room — Private Media Player for iPhone
+# Screening Room — Private Media Player for iPhone and iPad; Mac awaiting review
 
-Screening Room, also known as 私映, is a private media player for iPhone that encrypts and plays private videos directly from Files, iCloud Drive, NAS, and compatible storage providers. It protects media without requiring users to import files into a separate app-managed vault.
+Screening Room, also known as 私映, is a private media player for iPhone and iPad that encrypts and plays private videos directly from Files, iCloud Drive, NAS, and compatible storage providers. It protects media without requiring users to import files into a separate app-managed vault.
 
 Screening Room is primarily a private media player, not a traditional file vault with a secondary player.
 
 ## Canonical pages
 
+- English product overview: https://luckycamilleyq.github.io/screening-room-site/en.html
 - Product overview: https://luckycamilleyq.github.io/screening-room-site/
 - Files Recents privacy guide: https://luckycamilleyq.github.io/screening-room-site/keep-private-videos-out-of-files-recents.html
 - iCloud Drive encryption guide: https://luckycamilleyq.github.io/screening-room-site/protect-videos-stored-in-icloud-drive.html
@@ -17,6 +18,12 @@ Screening Room is primarily a private media player, not a traditional file vault
 - Technical support: https://luckycamilleyq.github.io/screening-room-site/support-en.html
 - 中文隐私政策: https://luckycamilleyq.github.io/screening-room-site/privacy-zh.html
 - 中文技术支持: https://luckycamilleyq.github.io/screening-room-site/support-zh.html
+
+## Release status (September 22, 2026)
+
+- Mac 1.2.1 (8) has been submitted for App Store review; availability is not confirmed.
+- Google Drive is not enabled in the current release. OneDrive is supported.
+- Native Mac support covers local, external and compatible mounted folders, plus optional OneDrive.
 
 ## Core capabilities
 
