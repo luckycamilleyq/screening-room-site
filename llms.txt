@@ -6,6 +6,8 @@ Screening Room is primarily a private media player, not a traditional file vault
 
 ## Canonical pages
 
+- OneDrive playback and offline guide: https://luckycamilleyq.github.io/screening-room-site/onedrive-video-player-iphone-ipad.html
+
 - English product overview: https://luckycamilleyq.github.io/screening-room-site/en.html
 - Product overview: https://luckycamilleyq.github.io/screening-room-site/
 - Files Recents privacy guide: https://luckycamilleyq.github.io/screening-room-site/keep-private-videos-out-of-files-recents.html
