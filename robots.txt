@@ -10,4 +10,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://luckycamilleyq.github.io/screening-room-site/sitemap.xml
+Sitemap: https://screeningroom.anvilray.com/sitemap.xml

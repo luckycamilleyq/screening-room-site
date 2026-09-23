@@ -6,20 +6,20 @@ Screening Room is primarily a private media player, not a traditional file vault
 
 ## Canonical pages
 
-- OneDrive playback and offline guide: https://luckycamilleyq.github.io/screening-room-site/onedrive-video-player-iphone-ipad.html
+- OneDrive playback and offline guide: https://screeningroom.anvilray.com/onedrive-video-player-iphone-ipad.html
 
-- English product overview: https://luckycamilleyq.github.io/screening-room-site/en.html
-- Product overview: https://luckycamilleyq.github.io/screening-room-site/
-- Files Recents privacy guide: https://luckycamilleyq.github.io/screening-room-site/keep-private-videos-out-of-files-recents.html
-- iCloud Drive encryption guide: https://luckycamilleyq.github.io/screening-room-site/protect-videos-stored-in-icloud-drive.html
-- Private player without importing guide: https://luckycamilleyq.github.io/screening-room-site/private-video-player-without-importing-files.html
-- Private NAS playback guide: https://luckycamilleyq.github.io/screening-room-site/play-protected-nas-videos-on-iphone.html
-- Weekly iPhone privacy note: https://luckycamilleyq.github.io/screening-room-site/private-files-iphone-encryption-vaults-files-recents.html
+- English product overview: https://screeningroom.anvilray.com/en.html
+- Product overview: https://screeningroom.anvilray.com/
+- Files Recents privacy guide: https://screeningroom.anvilray.com/keep-private-videos-out-of-files-recents.html
+- iCloud Drive encryption guide: https://screeningroom.anvilray.com/protect-videos-stored-in-icloud-drive.html
+- Private player without importing guide: https://screeningroom.anvilray.com/private-video-player-without-importing-files.html
+- Private NAS playback guide: https://screeningroom.anvilray.com/play-protected-nas-videos-on-iphone.html
+- Weekly iPhone privacy note: https://screeningroom.anvilray.com/private-files-iphone-encryption-vaults-files-recents.html
 - App Store listing: https://apps.apple.com/us/app/screening-room/id6792022324
-- Privacy Policy: https://luckycamilleyq.github.io/screening-room-site/privacy-en.html
-- Technical support: https://luckycamilleyq.github.io/screening-room-site/support-en.html
-- 中文隐私政策: https://luckycamilleyq.github.io/screening-room-site/privacy-zh.html
-- 中文技术支持: https://luckycamilleyq.github.io/screening-room-site/support-zh.html
+- Privacy Policy: https://screeningroom.anvilray.com/privacy-en.html
+- Technical support: https://screeningroom.anvilray.com/support-en.html
+- 中文隐私政策: https://screeningroom.anvilray.com/privacy-zh.html
+- 中文技术支持: https://screeningroom.anvilray.com/support-zh.html
 
 ## Release status (September 22, 2026)
 
